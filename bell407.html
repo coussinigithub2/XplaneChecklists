@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Checklists pour X-Plane 12</title>
+	<meta charset="UTF-8">
+	<meta name="Content-Type" content="UTF-8">
+	<meta name="Content-Language" content="fr">
+	<meta name="Author" content="Coussini">
+	<meta name="Viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">	
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">        
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<!--Navigation bar-->
+	<div id="nav-placeholder">
+	</div>
+	<script>
+		    $("#nav-placeholder").load("nav.html");
+	</script>
+	<!--end of Navigation bar-->
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="text-center text-muted">Bell <small>407 G430</small></h1>
+		</div>
+	</div>
+	<!--Copier le modèle vierge ici-->	
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<h1 class="text-muted">Checklist</h1>
+				<div class="list-group" id="list-tab">
+					<a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-options">Options</a>
+					<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-pre-start">Pre-start</a>
+					<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-engine-start">Engine Start</a>
+					<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-before-takeoff">Before Takeoff</a>
+					<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-approach">Approach</a>
+					<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-shutdown">Shutdown</a>
+					<a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-parking">At Parking</a>
+				</div>
+			</div>
+			<div class="col-8">
+				<h1 class="text-muted">Items</h1>
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane active show" id="list-options">
+						<ul class="list-group">
+							<li class="list-group-item titre-sans-element-primaire">CREATE FLIGHT PLAN<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-flight-plan"><i class="fas fa-plane"></i></button></li>
+							<li class="list-group-item titre-sans-element-primaire">OPEN <strong>SIMBRIEF (IPAD)</strong></li>
+							<li class="list-group-item titre-sans-element-primaire">REMOVE ALL COVER (OUTSIDE VIEW / SEE OPTIONS)</li>
+							<li class="list-group-item titre-sans-element-primaire">ENTER FUEL DEPENDING PREVIEW PDF (OUTSIDE VIEW)</li>
+							<li class="list-group-item element-primaire">OPTIONS (FRONT RIGHT SIDE)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-front-option"><i class="fas fa-list-alt"></i></button></li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="list-pre-start">
+						<ul class="list-group">
+							<li class="list-group-item">HEADSET <kbd>USE</kbd></li>
+							<li class="list-group-item">THROTTLE <kbd>OFF</kbd></li>
+							<li class="list-group-item">COLLECTIVE <kbd>DOWN</kbd></li>
+							<li class="list-group-item">BARO <kbd>SET</kbd></li>
+							<li class="list-group-item">ALL OVERHEAD SWITCH <kbd>OFF</kbd> (Except Hydraulics)</li>
+							<li class="list-group-item element-lumiere">NAV LIGHT <kbd>ON</kbd><span class="important"> (POS LT)</span></li>
+							<li class="list-group-item element-lumiere">STROBE LIGHTS <kbd>ON</kbd><span class="important"> (ANTI COLL LT)</span></li>	
+							<li class="list-group-item">HYDRAULIC SYSTEM <kbd>ON</kbd> (CKECK)</li>
+							<li class="list-group-item">GPU <kbd>CONNECTED</kbd> (MENU)</li>
+
+							<li class="list-group-item">BATTERY <kbd>ON</kbd><span class="important"> (MASTER BAT)</span></li>
+							<li class="list-group-item"><i class="fas fa-circle-notch fa-spin"></i>&nbsp;&nbsp;("WAITING NR 0") -> HORN MUTE <kbd>PRESS</kbd></li>
+							<li class="list-group-item">INSTRUMENT LIGHT <kbd>ON</kbd></li>
+							<li class="list-group-item">BOOST XFR LEFT / RIGHT <kbd>ON</kbd></li>
+							<li class="list-group-item">FULL VALVE <kbd>ON</kbd> (AND COVERING)</li>
+							<li class="list-group-item">PEDAL STOP <kbd>ON</kbd> (AND COVERING)</li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="list-engine-start">
+						<ul class="list-group">
+							<li class="list-group-item">THROTTLE <kbd>IDLE</kbd></li>
+							<li class="list-group-item">START BUTTON <kbd>ON</kbd> (<span class="important">START HONEY</span=>. 3 SECONDS)</li>
+							<li class="list-group-item">GPU <kbd>DISCONNECTED</kbd> (MENU)</li>
+							<li class="list-group-item titre-et-element-primaire">WHEN NG INSTRUMENT > 62%</li>
+							<li class="list-group-item element-primaire">GEN <kbd>ON</kbd></li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="list-before-takeoff">
+						<ul class="list-group">
+							<li class="list-group-item">FLIGHT INSTRUMENTS DG, ATT, TURN <kbd>ON</kbd></li>
+							<li class="list-group-item">AVIONIC MASTER <kbd>ON</kbd><span class="important"> (AVIONICS BUS1)</span></li>
+							<li class="list-group-item">PITOT HEATER <kbd>ON</kbd> (BELLOW 10C)</li>
+							<li class="list-group-item">ANTI ICE <kbd>ON</kbd> (BELLOW 10C)</li>
+							<li class="list-group-item element-lumiere">LANDING LIGHT <kbd>ON</kbd><span class="important"> (LDG LTS)</span></li>	
+							<li class="list-group-item">THROTTLE <kbd>FULL</kbd></li>
+							<li class="list-group-item">GARMIN & TRANSPONDER <kbd>ON</kbd></li>
+							<li class="list-group-item">HORIZON <kbd>PULL 4 SECONDS</kbd> (TO SET CORRECTLY)</li>
+							<li class="list-group-item">SAS <kbd>ON</kbd></li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="list-approach">
+						<ul class="list-group">
+							<li class="list-group-item titre-sans-element-primaire">SPEED 70 KT</li>
+							<li class="list-group-item titre-sans-element-primaire">ALTITUDE ABOVE LANDING SPOT 500 FEET</li>
+							<li class="list-group-item titre-sans-element-primaire">RATE OF DESCENT 300 FT/MIN</li>
+							<li class="list-group-item titre-sans-element-primaire">USING CYCLIC AND PEDAL TO ADJUST LANDING</li>
+							<li class="list-group-item titre-et-element-primaire">WHEN SPEED 50 KT</li>
+							<li class="list-group-item element-primaire">PEDAL STOP <kbd>OFF</kbd> (AND COVERING)</li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="list-shutdown">
+						<ul class="list-group">
+							<li class="list-group-item">COLLECTIVE <kbd>FULL DOWN</kbd></li>
+							<li class="list-group-item element-lumiere">LANDING LIGHT <kbd>OFF</kbd><span class="important"> (LDG LTS)</span></li>	
+							<li class="list-group-item">THROTTLE <kbd>IDLE</kbd> -> HORN MUTE <kbd>PRESS</kbd></li>
+							<li class="list-group-item">PITOT HEATER <kbd>OFF</kbd> (BELLOW 10C)</li>
+							<li class="list-group-item">ANTI ICE <kbd>OFF</kbd> (BELLOW 10C)</li>
+							<li class="list-group-item">BOOST XFR <span class="important">LEFT </span><kbd>OFF</kbd></li>
+							<li class="list-group-item">FLIGHT INSTRUMENTS DG, ATT, TURN <kbd>OFF</kbd></li>
+							<li class="list-group-item">GARMIN & TRANSPONDER <kbd>OFF</kbd></li>
+							<li class="list-group-item">AVIONIC MASTER <kbd>OFF</kbd><span class="important"> (AVIONICS BUS1)</span></li>
+							<li class="list-group-item element-lumiere">NAV LIGHT <kbd>OFF</kbd><span class="important"> (POS LT)</span></li>
+							<li class="list-group-item">GEN <kbd>OFF</kbd></li>
+							<li class="list-group-item">THROTTLE <kbd>OFF</kbd> -> HORN MUTE <kbd>PRESS</kbd></li>
+							<li class="list-group-item">FUEL VALVE <kbd>OFF</kbd></li>
+							<li class="list-group-item">BOOST XFR <span class="important">RIGHT </span><kbd>OFF</kbd></li>
+						</ul>
+					</div>
+					<div class="tab-pane" id="list-parking">
+						<ul class="list-group">
+							<li class="list-group-item">HEADSET <kbd>REMOVE</kbd></li>
+							<li class="list-group-item">WHEN NR < 40% <kbd>ROTOR BRAKE </kbd></li>
+							<li class="list-group-item">INSTRUMENT LIGHT <kbd>OFF</kbd></li>
+							<li class="list-group-item">HYDRAULIC SYSTEM <kbd>OFF</kbd></li>
+							<li class="list-group-item element-lumiere">STROBE LIGHTS <kbd>OFF</kbd><span class="important"> (ANTI COLL LT)</span></li>	
+							<li class="list-group-item">BATTERY <kbd>OFF</kbd><span class="important"> (MASTER BAT)</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>    
+	</div>    
+	<!-- 	modal flight plan here -->						
+	<div class="modal" id="modal-flight-plan" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">CREATE FLIGHT PLAN</h5>
+	      </div>
+	      <div class="modal-body">
+					<ul class="list-group">
+						<li class="list-group-item titre-fonce">SIMBRIEF (Desktop)</li>
+						<li class="list-group-item">Créé un vol; Générer le plan de vol OFP;</li>
+						<li class="list-group-item">À la page 2 du document PDF preview, copier le « routing »</li>
+						<li class="list-group-item titre-fonce">LITTLE NAVMAP (Desktop)</li>
+						<li class="list-group-item">Choisir l’option nouveau plan de vol à partir de la description de l’itinéraire</li>
+						<li class="list-group-item">Enlever les références de pistes (genre "/24r")</li>
+						<li class="list-group-item">Cliquez sur lire la description de l’itinéraire</li>
+						<li class="list-group-item">Cliquez sur créer un plan de vol</li>
+						<li class="list-group-item">Dans la planification de vol, cliquez sur les aéroports pour ajouter les sid ou les star ou les procédures d’approche selon le cas.</li>
+						<li class="list-group-item">Cliquez sur l’icône correspondant au profil d’élévation du plan de vol afin de noter<span class="important">ALTITUDE SECURITAIRE</span> à utiliser pour ce vol (la ligne rouge de ce graphique indique le niveau à respecter)</li>
+					</ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+		</div>
+	</div>
+	<!-- 	modal front option here -->						
+	<div class="modal" id="modal-front-option" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">OPTIONS</h5>
+	      </div>
+	      <div class="modal-body">
+					<ul class="list-group">
+						<li class="list-group-item">GPU (PERMET DE RECHARGER LA BATTERIE). PEUT S'UTILISER POUR DÉMARRER</li>				
+						<li class="list-group-item">LOW SKID (PATINS BAS). EN ENLEVANT CETTE OPTION, IL Y A DES PATINS HAUTS</li>		
+						<li class="list-group-item">FRAHM DAMPER (COUVERCLE HÉLICE)</li>		
+						<li class="list-group-item">GLASS DOORS (FENETRE COMPLETE PORTE AVANT)</li>		
+						<li class="list-group-item">DOOR V/WINDOWS (PETITE FENETRE SECTIONNELLE PORTE AVANT)</li>		
+						<li class="list-group-item">FRONT L DOOR (AJOUTE UNE PORTE GAUCHE AVANT)</li>		
+						<li class="list-group-item">FRONT R DOOR (AJOUTE UNE PORTE DROITE AVANT)</li>		
+						<li class="list-group-item">BACK L DOOR (AJOUTE UNE PORTE GAUCHE ARRIÈRE)</li>		
+						<li class="list-group-item">BACK R DOOR (AJOUTE UNE PORTE DROITE ARRIÈRE)</li>		
+						<li class="list-group-item">FLOATS (POSSIBLE AVEC PATINS HAUT ET SANS PANIERS)</li>		
+						<li class="list-group-item">LEFT BASKET (PANIER GAUCHE). CONTENEUR</li>		
+						<li class="list-group-item">RIGHT BASKET (PANIER DROIT). CONTENEUR</li>		
+						<li class="list-group-item">WIRE CUTTERS (COUTEAU À FILS)</li>		
+						<li class="list-group-item">ROTOR SHADOW (OMBRE DES ROTORS)</li>		
+						<li class="list-group-item">CINEFLEX (POSSIBLE AVEC PATIN HAUT)</li>		
+						<li class="list-group-item">SLING HOOK (CROCHET VENTRAL)</li>		
+						<li class="list-group-item">REMOVING TIES & CAPS (ENLEVE LES COUVERCLES ET LES CAPUCHONS PROTECTEURS</li>		
+						<li class="list-group-item">GROUND CART (PERMET UN PUSHBACK)</li>		
+					</ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+		</div>
+	</div>
+	<!-- 	modal insert Garmion 530 RNAV or ILS here -->						
+	<div class="modal" id="modal-enter-garmin-G530-rnav" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">INSERTING GARMIN G530 DATA</h5>
+	      </div>
+	      <div class="modal-body">
+					<ul class="list-group">
+						<li class="list-group-item list-group-item-danger">Toujours saisir l'aéroport de départ et destination au début de la séquence de saisi</li>
+						<li class="list-group-item list-group-item-danger">Ensuite entrer la SID, la ROUTE puis la STAR</li>
+						<hr>
+						<li class="list-group-item titre-et-element-primaire">Pour détruire un waypoint ou un item</li>
+						<li class="list-group-item element-primaire">Appuyez sur le gros bouton <kbd>CRSR</kbd> pour être en surbrillance</li>
+						<li class="list-group-item element-primaire">Tournez le gros bouton <kbd>CRSR</kbd> pour choisir un waypoint</li>
+						<li class="list-group-item element-primaire">Appuyez sur <kbd>CLR</kbd> + <kbd>ENT</kbd></li>
+						<hr>
+						<li class="list-group-item"><code>Cyhu/24r dct megtu naskk cyul/06r</code></li>
+						<li class="list-group-item titre-fonce">Saisir cyhu (Aéroport de départ)</li>
+						<li class="list-group-item">Appuyez longuement sur <kbd>CLR</kbd></li>
+						<li class="list-group-item">Appuyez sur <kbd>FPL</kbd></li>
+						<li class="list-group-item">Appuyez sur <kbd>MENU</kbd></li>
+						<li class="list-group-item">Utilisez un bouton <kbd>CRSR</kbd> et sélectionner « delete flight plan » + <kbd>ENT</kbd></li>
+						<li class="list-group-item">Si cyhu n’est pas inscrit, appuyez longuement sur <kbd>CLR</kbd> puis faire <kbd>FPL</kbd></li>
+						<li class="list-group-item">Assurez vous que cyhu est en surbrillance (sinon appuyez sur le bouton <kbd>CRSR</kbd>)</li>
+						<li class="list-group-item">Tournez le gros bouton <kbd>CRSR</kbd> pour choisir une ligne vierge en bas</li>
+						<li class="list-group-item titre-fonce">Saisir cyul (Aéroport d'arrivée)</li>
+						<li class="list-group-item">Tournez le petit bouton <kbd>CRSR</kbd> pour choisir la premiere</li>
+						<li class="list-group-item">Tournez le gros bouton <kbd>CRSR</kbd> pour faire la lettre suivante</li>
+						<li class="list-group-item">Lorsque le mot cyul est inscrit + <kbd>ENT (2 fois)</kbd></li>
+						<li class="list-group-item">Assurez vous que cyul est en surbrillance, ce qui permet d'insérer un point avant ce dernier</li>
+						<li class="list-group-item titre-fonce">Saisir la route megtu ET naskk</li>
+						<li class="list-group-item">Procédez à la saisie sur le mot cyul (ne pas s'en faire car cela n'effacera pas cyul)</li>
+						<li class="list-group-item titre-fonce">Procédure d'arrivée STAR</li>
+						<li class="list-group-item">Assurez vous que cyul est en surbrillance</li>
+						<li class="list-group-item">Appuyez sur <kbd>PROC</kbd></li>
+						<li class="list-group-item">Utilisez un bouton <kbd>CRSR</kbd> et sélectionner « select approach » + <kbd>ENT</kbd></li>
+						<li class="list-group-item titre-fonce">RNAV</li>
+						<li class="list-group-item">Utilisez un bouton <kbd>CRSR</kbd> et sélectionner « rnv06r gps » + <kbd>ENT</kbd></li>
+						<li class="list-group-item">Utilisez un bouton <kbd>CRSR</kbd> et sélectionner « vectors » + <kbd>ENT (2 fois)</kbd></li>
+						<li class="list-group-item titre-fonce">ILS</li>
+						<li class="list-group-item">Utilisez un bouton <kbd>CRSR</kbd> et sélectionner « ils06r » + <kbd>ENT</kbd></li>
+						<li class="list-group-item">Utilisez un bouton <kbd>CRSR</kbd> et sélectionner « vectors » + <kbd>ENT (2 fois)</kbd></li>
+					</ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+		</div>
+	</div>
+	<!-- 	modal flight plan here -->						
+	<div class="modal" id="modal-enter-garmin-G530-managing" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">SAVING/LOADING G530 GARMIN FLIGHT PLAN</h5>
+	      </div>
+	      <div class="modal-body">
+					<ul class="list-group">
+						<li class="list-group-item titre-fonce">SAUVEGARDE DU PLAN DE VOL</li>
+						<li class="list-group-item">Appuyez sur <kbd>FPL</kbd></li>
+						<li class="list-group-item">Appuyez sur <kbd>MENU</kbd></li>
+						<li class="list-group-item">Utilisez un bouton <kbd>CRSR</kbd> et sélectionner « save flight plan » + <kbd>ENT</kbd></li>
+						<li class="list-group-item titre-fonce">CHARGER UN PLAN DE VOL</li>
+						<li class="list-group-item">Appuyez sur <kbd>FPL</kbd></li>
+						<li class="list-group-item">Assurez vous le plan de vol ne soit pas en surbrillance (sinon appuyez sur le bouton <kbd>CRSR</kbd>)</li>
+						<li class="list-group-item">Utilisez le petit bouton <kbd>CRSR</kbd> afin d’afficher la liste des plans de vol sauvegardés</li>
+						<li class="list-group-item">Appuyez sur le bouton <kbd>CRSR</kbd></li>
+						<li class="list-group-item">Utilisez un bouton <kbd>CRSR</kbd> et sélectionnez le plan de vol désiré + <kbd>ENT</kbd></li>
+					</ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			$('a.list-group-item').click(function() {
+				$('li').removeClass("active");
+			});
+			$('li').click(function() {
+				$('li.active').removeClass("active");
+				$(this).addClass("active");
+			});
+		});
+	</script>	
+	<!--Fin du modèle vierge -->	
+</body>
+</html>

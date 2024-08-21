@@ -1,0 +1,110 @@
+/*!
+ * Mes styles pour les checklists
+ */
+.jumbotron 
+{
+	margin-bottom: 2rem;
+	background-color: #e9ecef;
+	border-radius: .3rem;
+}
+.img-menu 
+{
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
+.btn
+{
+	margin-left: 10px;
+}
+.btn-primary:not(:disabled):not(.disabled):focus{
+  box-shadow: 0 0 5px red;
+}
+a.list-group-item.active 
+{
+	background-color: #09A2A2;
+	border: #09A2A2;
+}
+li.list-group-item.active 
+{
+	background-color: lightgrey;
+	border: lightgrey;
+	color: black;
+}
+.important
+{
+	color: #0d6efd;
+}
+.tresimportant
+{
+	color: red;
+}
+kbd.petit
+{
+	font-size: 12px;
+}
+kbd.petit::after
+{
+	color: red;
+	content: "/";
+}
+/*!
+ * Styles Généraux
+ */
+.titre-fonce
+{
+	background-color: black;
+	color: white;
+}
+.titre-et-element-primaire
+{
+	background-color: #09A2A2;
+	color: white;
+}
+.element-primaire, li.list-group-item.element-primaire.active
+{
+	border-left-style: solid;
+	border-left-width: 20px;
+	border-left-color: #09A2A2;
+	padding-left: 30px;
+}
+.titre-sans-element-primaire
+{
+	/*background-color: #96FFFF;*/
+}
+.titre-sans-element-primaire::before
+{
+	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f061";
+	margin-right: 10px;
+}
+.titre-et-element-secondaire
+{
+	background-color: darkgrey;
+}
+.element-secondaire, li.list-group-item.element-secondaire.active
+{
+	border-left-style: solid;
+	border-left-width: 20px;
+	border-left-color: black;
+	padding-left: 30px;
+}
+.element-lumiere
+{
+	background-color: #fff3cd;
+	color: black;
+}
+.element-lumiere > kbd
+{
+	color:	orange;
+}
+.defile 
+{
+  height: 75vh;
+  overflow: hidden;
+  overflow-y: scroll; 
+}
+.pfd-airspeed
+{
+	color: #28B463;
+}

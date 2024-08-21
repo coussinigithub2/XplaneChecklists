@@ -1,0 +1,70 @@
+<div class="la-navbar">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="flightplanning.html">FLIGHT PLANNING</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="cessna172.html">172SP G530</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="cessna172g1000.html">172SP G1000</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="diamondda62.html">DA62</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="kingair350.html">King Air 350</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="bell407.html">Bell 407</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="airbus319.html">A319-A321</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="airbus320.html">A320</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="fenixA320.html">Fenix A320</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="flyByWireA32NX.html">FBW A32NX</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="airbus340.html">A340</a>
+					</li>
+				</ul>
+				<span class="navbar-text">
+					Checklists
+				</span>
+			</div>
+		</div>
+	</nav>		
+</div>
+<script>
+	$(function(){
+    var zaza = location.pathname.split('/');
+    var current = zaza[zaza.length-1];
+    if(current.length == 0)
+    {
+    	current = "index.html";
+    }
+    $('#navbarText li a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href').indexOf(current) !== -1)
+        {
+            $this.addClass('active');
+        }
+    })
+})	
+</script>
