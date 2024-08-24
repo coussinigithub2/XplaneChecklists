@@ -48,6 +48,7 @@
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-lineup">Line Up</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-take-off">Take Off</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-climb-cruise">Climb & Cruise</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-approach-preparation">Approach Preparation</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-descent">Descent</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-approach">Approach</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-landing">Landing</a>
@@ -229,9 +230,7 @@
                             <li class="list-group-item element-primaire element-lumiere">NOSE LIGHT <kbd>TAXI</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">PEDESTAL</li>
                             <li class="list-group-item element-primaire">PARKING BRAKE <kbd>OFF</kbd></li>
-                            <hr>
-                            <li class="list-group-item titre-sans-element-primaire">CALL FOLLOW ME CAR</li>
-                            <li class="list-group-item titre-sans-element-primaire">TAXING RUNWAY <kbd>20 KNOTS</kbd></li>
+                            <li class="list-group-item element-primaire">TAXING RUNWAY <kbd>20 KNOTS</kbd></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-lineup">
@@ -261,7 +260,8 @@
                             <li class="list-group-item">THROTTLE N1 <kbd>50%</kbd></li>
                             <li class="list-group-item list-group-item-danger">BRAKE <kbd>RELEASE</kbd></li>
                             <li class="list-group-item">THROTTLE N1 <kbd>FLEX or TOGA</kbd></li>
-                            <li class="list-group-item titre-sans-element-primaire important">JOYSTICK DOWN UNTIL 80KTS; NEUTRAL AT 100KTS</li>
+                            <li class="list-group-item list-group-item-danger">JOYSTICK DOWN UNTIL 80KTS; NEUTRAL AT 100KTS</li>
+                            <hr>
                             <li class="list-group-item titre-et-element-primaire">VR - POSITIVE RATE</li>
                             <li class="list-group-item element-primaire">LANDING GEAR <kbd>UP</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">FOLLOW FLIGHT DIRECTOR</li>
@@ -283,16 +283,20 @@
                             <li class="list-group-item titre-et-element-primaire">QNH FLASHING (PASSING TRANSITION ALT)</li>
                             <li class="list-group-item element-primaire">BARO <kbd>PULL</kbd> TO STD (DOWN ARROW)</li>
                             <li class="list-group-item titre-et-element-primaire">CRUISING</li>
-                            <li class="list-group-item element-primaire list-group-item-danger">TCAS TRAFIC SELECTOR <kbd>ALL</kbd> (Neutral)</li>
-                            <hr>
+                            <li class="list-group-item element-primaire list-group-item-danger">TCAS TRAFIC SELECTOR <kbd>BLW</kbd></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-approach-preparation">
+                        <ul class="list-group">
                             <li class="list-group-item titre-et-element-primaire">60 NM before T/D</li>
                             <li class="list-group-item element-primaire list-group-item-danger">CRUISE PAGE <kbd>PROG</kbd><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-enter-mcdu-prog"><i class="fas fa-keyboard"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">MCDU MENU/ATSU/AOC MENU/WX/WEATHER REQ</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">SET DESTINATION AIRPORT WITH METAR</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">SEND*</li>
                             <li class="list-group-item element-primaire"><i class="fas fa-circle-notch fa-spin"></i>&nbsp;&nbsp;("WAIT MESSAGE*")</li>
-                            <li class="list-group-item element-primaire">CHECK & REVIEW <kbd>APPROACH CHARTS</kbd></li>
-                            <li class="list-group-item element-primaire">INSERTING MCDU (APPR PAGE) <kbd>PERF</kbd><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-enter-mcdu-perf"><i class="fas fa-keyboard"></i></button></li>
+                            <li class="list-group-item element-primaire">REVIEW APPROACH CHARTS AND WIND FOR ARRIVAL</li>
+                            <li class="list-group-item element-primaire">MCDU <kbd>F-PLN</kbd> ARRIVAL<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-enter-mcdu-fpln-arrival"><i class="fas fa-keyboard"></i></button> <span class="tresimportant">(FOR ANY LONG TRIP STEP)</span></li>
+                            <li class="list-group-item element-primaire">INSERTING MCDU (APPR PAGE) <kbd>PERF</kbd></li>
                             <li class="list-group-item element-primaire list-group-item-danger">ALTITUDE ARRIVAL <kbd>SET</kbd></li>
                         </ul>
                     </div>
@@ -300,7 +304,6 @@
                         <ul class="list-group">
                             <li class="list-group-item titre-et-element-primaire">AT 5 NM FROM "T/D"</li>
                             <li class="list-group-item element-primaire">ALTITUDE BUTTON <kbd>PUSH</kbd> (UP ARROW)</li>
-                            <li class="list-group-item element-primaire list-group-item-danger">TCAS TRAFIC SELECTOR <kbd>BLW</kbd></li>
                             <hr>
                             <li class="list-group-item titre-et-element-primaire">GENERAL RULES (PASSING 10000 FT)</li>
                             <li class="list-group-item element-primaire element-lumiere">LAND <kbd>ON</kbd> (3 clic)</li>
