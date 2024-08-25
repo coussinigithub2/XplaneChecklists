@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Checklists pour ORBITER 2016</title>
+    <meta charset="UTF-8">
+    <meta name="Content-Type" content="UTF-8">
+    <meta name="Content-Language" content="fr">
+    <meta name="Author" content="Coussini">
+    <meta name="Viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">        
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+    <script>
+        $("#nav-placeholder").load("nav.html");
+    </script>
+    <!--end of Navigation bar-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="text-center text-muted">Orbiter <small>2016</small></h1>
+        </div>
+    </div>
+    <!--Copier le modèle vierge ici-->  
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1 class="text-muted">Checklist</h1>
+                <div class="list-group defile" id="list-tab">
+                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-mise-en-orbite">Mise en orbite</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-avec-iss">Aligner avec ISS</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-synchroniser-orbite-iss">Synchroniser orbite avec ISS</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-docking-avec-iss">Docking avec ISS</a>
+                </div>
+            </div>
+            <div class="col-8">
+                <h1 class="text-muted">Items</h1>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane active show" id="list-mise-en-orbite">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item element-primaire"><kbd>DSP</kbd> Orbiter lines / orbit planes</li>
+                            <li class="list-group-item element-primaire"><kbd>TRK</kbd> ISS</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si la ligne jaune (courbe) va vers le sud</li>
+                            <li class="list-group-item element-primaire element-lumiere">Soustraire de 180 / sinon pas de correctif</li>
+                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item element-primaire"><kbd>PRJ</kbd> EQU</li>
+                            <li class="list-group-item element-primaire"><kbd>FRM</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le INC (ex: 51.56)</li>
+                            <li class="list-group-item titre-et-element-primaire">SURFACE MFD</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez la LATITUDE (ex: 28.591 N)</li>
+                            <li class="list-group-item titre-et-element-primaire">CALCULER LE CAP POUR LE LANCEMENT</li>
+                            <li class="list-group-item element-primaire">Dans le DGIV faire <kbd>D8</kbd></li>
+                            <li class="list-group-item element-primaire">"<kbd>LATITUDE</kbd>" COS M1</li>
+                            <li class="list-group-item element-primaire">"<kbd>INC</kbd>" COS MR1 ENT ASIN</li>
+                            <li class="list-group-item element-primaire">Si courbe vers le sud <kbd>INC</kbd> 180 - (resultat precedent) ENT</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le cap</li>
+                            <li class="list-group-item titre-et-element-primaire">PROCEDER AU LANCEMENT</li>
+                            <li class="list-group-item element-primaire"><kbd>PRO904SPEC</kbd> "cap" ENT</li>
+                            <li class="list-group-item element-primaire"><kbd>EXE</kbd></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-aligner-avec-iss">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">ALIGN MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si la s'approche de AN (NORMAL -)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si la s'approche de DN (NORMAL +)</li>
+                            <li class="list-group-item element-primaire"><kbd>NORMAL- OU +</kbd></li>
+                            <li class="list-group-item element-primaire element-lumiere">Attendre Engage Thrust</li>
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> Clavier numerique</li>
+                            <li class="list-group-item element-primaire"><kbd>/</kbd> Translation</li>
+                            <li class="list-group-item element-primaire"><kbd>6 ou 9</kbd> Pour affiner</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-synchroniser-orbite-iss">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">INTERPLANETARY MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> nodal regression (NO)</li>
+                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> mission timer (MJD)</li>
+                            <li class="list-group-item element-primaire"><kbd>COURSE</kbd> Target intercept (Set)</li>
+                            <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item element-primaire"><kbd>PRJ</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>ADJ</kbd>10X ou 1X</li>
+                            <li class="list-group-item element-primaire"><kbd>TIN</kbd>Augmenter pour diminuer DV et IV</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand les valeurs sont stables, faire la suite</li>
+                            <li class="list-group-item element-primaire"><kbd>TOF</kbd>LOCK (set)</li>
+                            <li class="list-group-item element-primaire"><kbd>TIN</kbd>Augmenter/Diminuer pour diminuer DV et IV</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand les valeurs sont egales (DV/IV)</li>
+                            <li class="list-group-item element-primaire"><kbd>TOF</kbd>UNLOCK (set)</li>
+                            <li class="list-group-item element-primaire"><kbd>TEJ</kbd>Augmenter/Diminuer pour diminuer DV et IV</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand les valeurs sont egales (DV/IV)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation (TEJ petit)</li>
+                            <li class="list-group-item element-primaire"><kbd>PG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>BV</kbd></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-docking-avec-iss">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">OBJECT INFO (en haut de l'ecran)</li>
+                            <li class="list-group-item element-primaire"><kbd>VESSEL</kbd> ISS</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le XPDR</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le port dock libre</li>
+                            <li class="list-group-item titre-et-element-primaire">COM NAV MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>NAV1</kbd> XPDR</li>
+                            <li class="list-group-item element-primaire"><kbd>NAV2</kbd> port dock libre</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand NAV1 a 3 barre</li>
+                            <li class="list-group-item element-primaire"><kbd>NAV2</kbd> Sur courante</li>
+                            <li class="list-group-item element-primaire"><kbd>NOSE CONE</kbd> Ouvrir</li>
+                            <li class="list-group-item element-primaire"><kbd>PRO300SPEC0</kbd> Auto docking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>    
+    <script>
+        $(document).ready(function() {
+            $('a.list-group-item').click(function() {
+                $('li').removeClass("active");
+            });
+            $('li').click(function() {
+                $('li.active').removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+    </script>   
+    <!--Fin du modèle vierge -->    
+</body>
+</html>
