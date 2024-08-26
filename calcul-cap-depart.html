@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul d'Inclinaison</title>
+    <script>
+        function calculateInclination() {
+            // Récupère les valeurs des angles
+            var incPapyref = parseFloat(document.getElementById("incPapyref").value);
+            var latCanaveral = parseFloat(document.getElementById("latCanaveral").value);
+
+            // Conversion des degrés en radians
+            var radiansInc = incPapyref * Math.PI / 180;
+            var radiansLat = latCanaveral * Math.PI / 180;
+
+            // Calcul du résultat arcsin(cos(inc) / cos(lat))
+            var result = Math.asin(Math.cos(radiansInc) / Math.cos(radiansLat));
+
+            // Conversion du résultat en degrés
+            result = result * 180 / Math.PI;
+
+            // Affiche le résultat
+            document.getElementById("result").textContent = "Résultat: " + result.toFixed(2) + "°";
+        }
+    </script>
+</head>
+<body>
+    <h2>Calcul de l'Inclinaison</h2>
+    <form>
+        <label for="incPapyref">Inclinaison Papyref (en degrés) :</label><br>
+        <input type="number" id="incPapyref" step="any" value="55.45"><br><br>
+
+        <label for="latCanaveral">Latitude Cap Canaveral (en degrés) :</label><br>
+        <input type="number" id="latCanaveral" step="any" value="28.521"><br><br>
+
+        <button type="button" onclick="calculateInclination()">Calculer</button>
+    </form>
+
+    <p id="result"></p>
+</body>
+</html>

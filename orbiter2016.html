@@ -9,7 +9,7 @@
     <meta name="Viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="stylesheet" href="css/style.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>
@@ -48,13 +48,22 @@
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
                             <li class="list-group-item element-primaire"><kbd>DSP</kbd> Orbiter lines / orbit plane</li>
                             <li class="list-group-item element-primaire"><kbd>TRK</kbd> ISS</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si la ligne jaune (courbe) va vers le bas  : CAP 138</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si la ligne jaune (courbe) va vers le haut : CAP 45</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendre que la ligne jaune s'approche du GL-01 (Cap canaveral)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si ligne jaune (courbe) va vers le haut : Cap Ascendant</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez la LATITUDE</li>
+                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item element-primaire"><kbd>FRM</kbd> (EQU)</li>
+                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour bien voir</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le INC</li>
                             <li class="list-group-item titre-et-element-primaire">ALIGN MFD</li>
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item titre-et-element-primaire">CALCUL DU CAP</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">CALCULER LE CAP<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-calcule-cap"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Proceder au lancement a TN 330</li>
-                            <li class="list-group-item element-primaire"><kbd>PRO904SPEC138</kbd> DESCENDANT ou <kbd>PRO904SPEC45</kbd> ENT</li>
+                            <li class="list-group-item element-primaire"><kbd>PRO904SPEC "cap calcule"</kbd> ENT</li>
                             <li class="list-group-item element-primaire"><kbd>EXE</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">A TAS 500, utiliser 4-6 pour reduire le rinc</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-aligner-avec-iss">
@@ -111,6 +120,64 @@
             </div>
         </div>    
     </div>    
+    <!--    modal calcule cap here -->                       
+    <div class="modal" id="modal-calcule-cap" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">CALCUL CAP LANCEMENT</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="incBase" class="form-label">INC (BASE, ISS, ETC)</label>
+                            <input type="number" id="incBase" name="incBase" step="any">
+                        </div>
+                        <div class="mb-3">
+                            <label for="latDepart" class="form-label">LATITUDE BASE DEPART</label>
+                            <input type="number" id="latDepart" name="latDepart" step="any">
+                        </div>
+                        <div class="mb3">
+                            <label for="cap1" class="form-label"><span class="text-danger">CAP ASCENDANT</span></label>
+                            <output id="cap1" name="cap1" class="text-danger"></output>
+                        </div>
+                        <div class="mb3">
+                            <label for="cap2" class="form-label"><span class="text-danger">CAP DESCENDANT</span></label>
+                            <output id="cap2" name="cap2" class="text-danger"></output>
+                        </div>
+                        <div><input class="btn btn-secondary" type="button" value="Calcul" onclick="calculeCap()"></div>
+                    </form> 
+                    <script>
+                        function calculeCap() {
+                            // Récupère les valeurs des angles
+                            var incBase = parseFloat(document.getElementById("incBase").value);
+                            var latDepart = parseFloat(document.getElementById("latDepart").value);
+
+                            // Conversion des degrés en radians
+                            var radiansInc = incBase * Math.PI / 180;
+                            var radiansLat = latDepart * Math.PI / 180;
+
+                            // Calcul du résultat arcsin(cos(inc) / cos(lat))
+                            var result = Math.asin(Math.cos(radiansInc) / Math.cos(radiansLat));
+
+                            // Conversion du résultat en degrés
+                            result = result * 180 / Math.PI;
+
+                            // Descendant
+                            var result2 = 180-result;
+
+                            // Affiche le résultat
+                            document.getElementById("cap1").textContent = "Résultat: " + result.toFixed(2) + "°";
+                            document.getElementById("cap2").textContent = "Résultat: " + result2.toFixed(2) + "°";
+                        }
+                    </script>                           
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>9
+            </div>
+        </div>
+    </div>
     <script>
         $(document).ready(function() {
             $('a.list-group-item').click(function() {
