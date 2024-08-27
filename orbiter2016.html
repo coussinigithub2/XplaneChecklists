@@ -47,7 +47,8 @@
                             <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
                             <li class="list-group-item element-primaire"><kbd>DSP</kbd> Orbiter lines / orbit plane</li>
-                            <li class="list-group-item element-primaire"><kbd>TRK</kbd> ISS</li>
+                            <li class="list-group-item element-primaire"><kbd>DSP</kbd> Terminator / Line+shading</li>
+                            <li class="list-group-item element-primaire"><kbd>TRK</kbd> <kbd>ZM+</kbd></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Attendre que la ligne jaune s'approche du GL-01 (Cap canaveral)</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Si ligne jaune (courbe) va vers le haut : Cap Ascendant</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Notez la LATITUDE</li>
@@ -55,15 +56,15 @@
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
                             <li class="list-group-item element-primaire"><kbd>FRM</kbd> (EQU)</li>
                             <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour bien voir</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le INC</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le INC colonne ISS</li>
                             <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
                             <li class="list-group-item titre-et-element-primaire">CALCUL DU CAP</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">CALCULER LE CAP<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-calcule-cap"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Proceder au lancement a TN 330</li>
-                            <li class="list-group-item element-primaire"><kbd>PRO904SPEC "cap calcule"</kbd> ENT</li>
-                            <li class="list-group-item element-primaire"><kbd>EXE</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">A TAS 500, utiliser 4-6 pour reduire le rinc</li>
+                            <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> "cap du calcul" </strong><kbd>ENTER</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>E (EXE)</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser 4-6 pour reduire le rinc du Align Planes MFD</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-aligner-avec-iss">
@@ -81,7 +82,10 @@
                     </div>
                     <div class="tab-pane" id="list-synchroniser-orbite-iss">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">INTERPLANETARY MFD</li>
+                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque la ligne jaune pointe sur le rond vert (plein), notes l'altitude de l'ISS</li>
                             <li class="list-group-item element-primaire"><kbd>MOD</kbd> nodal regression (NO)</li>
                             <li class="list-group-item element-primaire"><kbd>MOD</kbd> mission timer (MJD)</li>
                             <li class="list-group-item element-primaire"><kbd>COURSE</kbd> Target intercept (Set)</li>
