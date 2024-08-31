@@ -67,14 +67,7 @@
                     </div>
                     <div class="tab-pane" id="list-aligner-avec-iss">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">ALIGN MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si on s'approche de AN) <kbd>NORMAL-</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si on s'approche de DN) <kbd>NORMAL+</kbd></li>
-                            <li class="list-group-item element-primaire element-lumiere">Attendre Engage Thrust</li>
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> Clavier numerique</li>
-                            <li class="list-group-item element-primaire"><kbd>/</kbd> Translation</li>
-                            <li class="list-group-item element-primaire"><kbd>6 ou 9</kbd> Pour affiner</li>
+                            <li class="list-group-item element-primaire">ALIGN ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-synchroniser-orbite-iss">
@@ -85,24 +78,19 @@
                             <li class="list-group-item element-primaire"><kbd>PRJ</kbd> SHP</li>
                             <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
                             <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque la ligne jaune pointe sur le rond vert (plein), notes l'altitude de l'ISS</li>
-                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> nodal regression (NO)</li>
-                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> mission timer (MJD)</li>
-                            <li class="list-group-item element-primaire"><kbd>COURSE</kbd> Target intercept (Set)</li>
+                            <li class="list-group-item element-primaire"><kbd>PROG</kbd> Pour se mettre en prograde</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque la nuit est presque là, faire une petite poussée</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque le ISS est à 0 de mon ApA, noter son ALT</li>
+                            <li class="list-group-item titre-et-element-primaire">SYNC ORBIT MFD</li>
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
-                            <li class="list-group-item element-primaire"><kbd>PRJ</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>ADJ</kbd>10X ou 1X</li>
-                            <li class="list-group-item element-primaire"><kbd>TIN</kbd>Augmenter pour diminuer DV et IV</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand les valeurs sont stables, faire la suite</li>
-                            <li class="list-group-item element-primaire"><kbd>TOF</kbd>LOCK (set)</li>
-                            <li class="list-group-item element-primaire"><kbd>TIN</kbd>Augmenter/Diminuer pour diminuer DV et IV</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand les valeurs sont egales (DV/IV)</li>
-                            <li class="list-group-item element-primaire"><kbd>TOF</kbd>UNLOCK (set)</li>
-                            <li class="list-group-item element-primaire"><kbd>TEJ</kbd>Augmenter/Diminuer pour diminuer DV et IV</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand les valeurs sont egales (DV/IV)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation (TEJ petit)</li>
-                            <li class="list-group-item element-primaire"><kbd>PG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>BV</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer le temps</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau et le ISS sont proche (faire un Aligner avec ISS)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Rapprocher les deux vaisseau sont encore plus proche (faire un Aligner avec ISS)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD et SYNC ORBIT MFD</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau est à PeA 0 :</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Faire une poussée pour réduire le DTMin à zéro (Sync Orbit)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque sur Sync Orbit, le Sh-ToR est à 2.600k (Diminuer le DTMin)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque sur Sync Orbit, le Sh-ToR est à 1.200k (Diminuer le DTMin)</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-docking-avec-iss">
@@ -178,7 +166,32 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>9
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal Aligner avec ISS -->                       
+    <div class="modal" id="modal-align-iss" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aligner avec ISS</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">ALIGN MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si on s'approche de AN) <kbd>NORMAL-</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si on s'approche de DN) <kbd>NORMAL+</kbd></li>
+                        <li class="list-group-item element-primaire element-lumiere">Attendre Engage Thrust</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> Clavier numerique</li>
+                        <li class="list-group-item element-primaire"><kbd>/</kbd> Translation</li>
+                        <li class="list-group-item element-primaire"><kbd>6 ou 9</kbd> Pour affiner</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
