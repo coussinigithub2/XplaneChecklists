@@ -78,19 +78,19 @@
                             <li class="list-group-item element-primaire"><kbd>PRJ</kbd> SHP</li>
                             <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
                             <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
-                            <li class="list-group-item element-primaire"><kbd>PROG</kbd> Pour se mettre en prograde</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque la nuit est presque là, faire une petite poussée</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque le ISS est à 0 de mon ApA, noter son ALT</li>
+                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque le jour est là, faire une petite poussée pour 375K ApA</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque le ISS est à 0 de mon PeA, noter son ALT</li>
+                            <li class="list-group-item element-primaire"><kbd>RetroGrade</kbd> Pour se mettre en retrograde</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau est à 0 de mon ApA, faire une poussée jusqu'à ALT ISS</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Diminuer le DTmin à zéro</li>
                             <li class="list-group-item titre-et-element-primaire">SYNC ORBIT MFD</li>
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item element-primaire"><kbd>LEN</kbd> 18</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer le temps</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau et le ISS sont proche (faire un Aligner avec ISS)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Rapprocher les deux vaisseau sont encore plus proche (faire un Aligner avec ISS)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD et SYNC ORBIT MFD</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau est à PeA 0 :</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Faire une poussée pour réduire le DTMin à zéro (Sync Orbit)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque sur Sync Orbit, le Sh-ToR est à 2.600k (Diminuer le DTMin)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque sur Sync Orbit, le Sh-ToR est à 1.200k (Diminuer le DTMin)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau est sur la 5ième orbite, faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau est sur la 4ième et 2ième orbite, Diminuer le DTmin à zéro</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">On est assez proche pour se ppéparer au Docking</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-docking-avec-iss">
@@ -100,11 +100,9 @@
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le XPDR</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le port dock libre</li>
                             <li class="list-group-item titre-et-element-primaire">COM NAV MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>NAV1</kbd> XPDR</li>
-                            <li class="list-group-item element-primaire"><kbd>NAV2</kbd> port dock libre</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand NAV1 a 3 barre</li>
-                            <li class="list-group-item element-primaire"><kbd>NAV2</kbd> Sur courante</li>
-                            <li class="list-group-item element-primaire"><kbd>NOSE CONE</kbd> Ouvrir</li>
+                            <li class="list-group-item element-primaire"><kbd>NAV1</kbd> port dock libre</li>
+                            <li class="list-group-item element-primaire"><kbd>NAV2</kbd> XPDR (transpondeur ISS)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand NAV1 a 1 barre</li>
                             <li class="list-group-item element-primaire"><kbd>PRO300SPEC0</kbd> Auto docking</li>
                         </ul>
                     </div>
