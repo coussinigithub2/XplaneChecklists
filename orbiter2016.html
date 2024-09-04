@@ -34,41 +34,67 @@
             <div class="col-4">
                 <h1 class="text-muted">Checklist</h1>
                 <div class="list-group defile" id="list-tab">
-                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-mise-en-orbite">Mise en orbite</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-dgiv">Décollage DGIV</a>
+                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-mise-en-orbite-vers-iss">Mise en orbite vers ISS</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-mise-en-orbite-vers-lune">Mise en orbite vers la Lune</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-dgiv">Décollage DGIV vers ISS</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-avec-iss">Aligner avec ISS</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-synchroniser-orbite-iss">Synchroniser orbite avec ISS</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-docking-avec-iss">Docking avec ISS</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-circulariser">Circulariser une orbite</a>
                 </div>
             </div>
             <div class="col-8">
                 <h1 class="text-muted">Items</h1>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane active show" id="list-mise-en-orbite">
+                    <div class="tab-pane active show" id="list-mise-en-orbite-vers-iss">
                         <ul class="list-group">
                             <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
                             <li class="list-group-item element-primaire"><kbd class="petit">DSP</kbd><kbd class="petit">Orbiter lines</kbd><kbd class="petit">Orbit plane</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>TRK</kbd> Et <kbd>ZM+</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">DETERMINER LA LATITUDE</li>
+                            <li class="list-group-item titre-et-element-primaire">DÉTERMINER LA LATITUDE</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">MAP MFD</kbd><kbd class="petit">en bas SHP:</kbd><kbd class="petit">Degre N/S</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD: DETERMINER L'INCLINAISON DE ISS</li>
+                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD: DÉTERMINER L'INCLINAISON DE ISS</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>FRM</kbd> et <kbd>MOD</kbd> et <kbd>DST</kbd></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le INC en Jaune</li>
                             <li class="list-group-item titre-et-element-primaire">CALCUL DU CAP</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">CALCULER LE CAP<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-calcule-cap"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (LANCEMENT)</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement DGIV</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-mise-en-orbite-vers-lune">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Mod</kbd><kbd class="petit">Surface</kbd> <kbd class="petit">Frm</kbd><kbd class="petit">Earth Equ</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">RECALLER LE MOMENT DU DÉCOLLAGE</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 1000</li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Config</li>
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Changer le Countdown pour la date actuelle avec <kbd>SET</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Exemple '12-dec-2016 02:30:00' <kbd>ENTER</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 300</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Le cap sera <kbd>90</kbd></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-decollage-dgiv">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (LANCEMENT)</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 330</li>
                             <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE</li>
                             <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> "cap du calcul" </strong><kbd>ENTER</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>E (EXE)</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser <kbd>4</kbd> ou <kbd>6</kbd> pour réduire le rinc du Align Planes MFD</li>
+                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (LANCEMENT VERS ISS)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser <kbd>4</kbd> ou <kbd>6</kbd> pour réduire le rinc</li>
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (LANCEMENT VERS LUNE)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser <kbd>4</kbd> ou <kbd>6</kbd> pour réduire le EIn</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-aligner-avec-iss">
@@ -102,7 +128,7 @@
                     </div>
                     <div class="tab-pane" id="list-docking-avec-iss">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">OBJECT INFO (en haut de l'ecran)</li>
+                            <li class="list-group-item titre-et-element-primaire">OBJECT INFO (en haut de l'écran)</li>
                             <li class="list-group-item element-primaire"><kbd>VESSEL</kbd> ISS</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le XPDR</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le port du dock libre</li>
@@ -116,6 +142,16 @@
                             <li class="list-group-item titre-et-element-primaire">DOCKING MFD (DGIV)</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Ouvrir le nez pour docking</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Suivre le déroullement</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-circulariser">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">INTERPLANETARY MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>MNU</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>Circ</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Selon le ApT ou le PeT positionner la croix au centre</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque ApT ou PeT est à zero, faire <kbd>AB</kbd></li>
                         </ul>
                     </div>
                 </div>
