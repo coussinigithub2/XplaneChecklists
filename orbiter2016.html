@@ -36,6 +36,9 @@
                 <div class="list-group defile" id="list-tab">
                     <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-mise-en-orbite-vers-iss">Mise en orbite vers ISS</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-mise-en-orbite-vers-lune">Mise en orbite vers la Lune</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-ejection-vers-lune">Éjection vers la Lune (TLI)</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-correction-vers-lune">Correction vers la Lune (TLCC) à PeT 100.00k</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-insertion-orbite-lunaire">Insertion en orbite lunaire (LOI) à PeT 3000</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-dgiv">Décollage DGIV vers ISS</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-avec-iss">Aligner avec ISS</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-synchroniser-orbite-iss">Synchroniser orbite avec ISS</a>
@@ -84,6 +87,48 @@
                             <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 300</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Le cap sera <kbd>90</kbd></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-ejection-vers-lune">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TLI</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite)</li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-correction-vers-lune">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-sans-element-primaire">Si les MDF gauche et droite ne sont pas présent (sinon faire le TLCC seulement)</li>
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TLCC</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite)</li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-insertion-orbite-lunaire">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program LOI
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite)</li>
+                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
+                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-decollage-dgiv">
