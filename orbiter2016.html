@@ -34,7 +34,8 @@
             <div class="col-4">
                 <h1 class="text-muted">Checklist</h1>
                 <div class="list-group defile" id="list-tab">
-                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-mise-en-orbite-vers-iss">[ISS] Mise en orbite vers</a>
+                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-mise-en-orbite-vers-iss">[ISS] Calcul lancement</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-navette">[ISS] Décollage Navette vers</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-dgiv">[ISS] Décollage DGIV vers</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-avec-iss">[ISS] Aligner avec</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-synchroniser-orbite-iss">[ISS] Synchroniser orbite avec</a>
@@ -57,8 +58,7 @@
                             <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
                             <li class="list-group-item element-primaire"><kbd class="petit">DSP</kbd><kbd class="petit">Orbiter lines</kbd><kbd class="petit">Orbit plane</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>TRK</kbd> Et <kbd>ZM+</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">DÉTERMINER LA LATITUDE</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">MAP MFD</kbd><kbd class="petit">en bas SHP:</kbd><kbd class="petit">Degre N/S</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">MAP MFD</kbd><kbd class="petit">en bas SHP:</kbd><kbd class="petit">Degre N/S</kbd> <strong>Pour déterminer la lalitude</strong></li>
                             <li class="list-group-item titre-et-element-primaire">ORBIT MFD: DÉTERMINER L'INCLINAISON DE ISS</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>FRM</kbd> et <kbd>MOD</kbd> et <kbd>DST</kbd></li>
@@ -67,7 +67,14 @@
                             <li class="list-group-item element-primaire titre-sans-element-primaire">CALCULER LE CAP<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-calcule-cap"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (LANCEMENT)</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement DGIV</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement DGIV ou Navette</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-decollage-navette">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">ASCENT AP MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>AZ+</kbd><strong> "inclinaison ISS (Orbit Inc.)" </strong></li>
+                            <li class="list-group-item element-primaire"><kbd>L</kbd><strong> pour le lancement </strong></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-decollage-dgiv">
