@@ -34,13 +34,13 @@
             <div class="col-4">
                 <h1 class="text-muted">Checklist</h1>
                 <div class="list-group defile" id="list-tab">
-                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-mise-en-orbite-vers-iss">[ISS] Calcul lancement</a>
+                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-calcul-lancement-vers-iss">[ISS] Calcul de lancement</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-navette">[ISS] Décollage Navette vers</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-dgiv">[ISS] Décollage DGIV vers</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-avec-iss">[ISS] Aligner avec</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-synchroniser-orbite-iss">[ISS] Synchroniser orbite avec</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-docking-avec-iss">[ISS] Docking avec</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-mise-en-orbite-vers-lune">[LUNE] Mise en orbite vers</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-calcul-lancement-vers-lune">[LUNE] Calcul de lancement</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-ejection-vers-lune">[LUNE] Éjection vers (TLI)</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-correction-vers-lune">[LUNE] Correction vers (TLCC) à PeT 100.00k</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-insertion-orbite-lunaire">[LUNE] Insertion orbite lunaire (LOI) à PeT 3000</a>
@@ -52,7 +52,7 @@
             <div class="col-8">
                 <h1 class="text-muted">Items</h1>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane active show" id="list-mise-en-orbite-vers-iss">
+                    <div class="tab-pane active show" id="list-calcul-lancement-vers-iss">
                         <ul class="list-group">
                             <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
@@ -65,27 +65,33 @@
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le INC en Jaune</li>
                             <li class="list-group-item titre-et-element-primaire">CALCUL DU CAP</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">CALCULER LE CAP<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-calcule-cap"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (LANCEMENT)</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement DGIV ou Navette</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-decollage-navette">
                         <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement</li>
                             <li class="list-group-item titre-et-element-primaire">ASCENT AP MFD</li>
                             <li class="list-group-item element-primaire"><kbd>AZ+</kbd><strong> "inclinaison ISS (Orbit Inc.)" </strong></li>
-                            <li class="list-group-item element-primaire"><kbd>L</kbd><strong> pour le lancement </strong></li>
+                            <li class="list-group-item element-primaire"><kbd>L</kbd> Pour le lancement</li>
+                            <li class="list-group-item titre-et-element-primaire">OUVERTURE DE LA SOUTE QUAND LORSQUE QUE LE ACT N'EST PLUS EN SURBRILLANCE</li>
+                            <li class="list-group-item element-primaire"><kbd>K</kbd> ouverture de la soute</li>
+                            <li class="list-group-item element-primaire"><kbd>CTRL-U</kbd> ouverture de l'antenne KU-BAND</li>
+                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (SUITE)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-decollage-dgiv">
                         <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement</li>
                             <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE</li>
                             <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> "cap du calcul" </strong><kbd>ENTER</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>E (EXE)</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (LANCEMENT VERS ISS)</li>
+                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (SUITE)</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser <kbd>4</kbd> ou <kbd>6</kbd> pour réduire le rinc</li>
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (LANCEMENT VERS LUNE)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser <kbd>4</kbd> ou <kbd>6</kbd> pour réduire le EIn</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-aligner-avec-iss">
@@ -135,7 +141,7 @@
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Suivre le déroullement</li>
                         </ul>
                     </div>
-                    <div class="tab-pane" id="list-mise-en-orbite-vers-lune">
+                    <div class="tab-pane" id="list-calcul-lancement-vers-lune">
                         <ul class="list-group">
                             <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD</li>
                             <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
