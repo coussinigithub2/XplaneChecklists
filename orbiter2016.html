@@ -77,10 +77,10 @@
                             <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "orbit_alt=350e3" </strong> Altitude = 350KM</li>
                             <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "azimuth=139*RAD" </strong> Azimuth = 139 degré</li>
                             <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "do_oms2=false" </strong> Pas de OMS2</li>
-                            <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "launch()" </strong> À TN 305</li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd>INP</kbd> <strong> "launch()" </strong> À TN 305</li>
                             <li class="list-group-item titre-et-element-primaire">ASCENT AP MFD (ORBITER 2016)</li>
                             <li class="list-group-item element-primaire"><kbd>AZ+</kbd><strong> "inclinaison ISS (Orbit Inc.)" </strong></li>
-                            <li class="list-group-item element-primaire"><kbd>L</kbd> Pour le lancement</li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd>L</kbd> Pour le lancement</li>
                             <li class="list-group-item titre-et-element-primaire">OUVERTURE DE LA SOUTE LORSQUE ACT N'EST PLUS EN SURBRILLANCE</li>
                             <li class="list-group-item element-primaire"><kbd>K</kbd> ouverture de la soute</li>
                             <li class="list-group-item element-primaire"><kbd>CTRL-U</kbd> ouverture de l'antenne KU-BAND</li>
@@ -95,7 +95,7 @@
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement</li>
                             <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE</li>
                             <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> "cap du calcul" </strong><kbd>ENTER</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>E (EXE)</kbd></li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd>E (EXE)</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (SUITE)</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser <kbd>4</kbd> ou <kbd>6</kbd> pour réduire le rinc</li>
                         </ul>
@@ -112,21 +112,21 @@
                             <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
                             <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
                             <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
                                 <i class="bi-sunrise" style="font-size: 2rem;"></i>
                                 Faire une petite poussée pour 375K ApA
                             </li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque le ISS est à 0 de mon PeA, noter le ALT en jaune</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau est à 0 de mon ApA, faire une poussée pour que PeA = ALT ISS</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque mon vaisseau est à 0 de mon ApA, faire une poussée pour que PeA = ALT ISS</li>
                             <li class="list-group-item titre-et-element-primaire">SYNC ORBIT MFD</li>
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
                             <li class="list-group-item element-primaire"><kbd>LEN</kbd> 10</li>
                             <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer le temps</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Au PeT 0, faire un poussée pour diminuer le DTmin</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque mon vaisseau est sur la 5ième orbite, faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Au PeT 0, faire un poussée pour diminuer le DTmin</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque mon vaisseau est sur la 5ième orbite, faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item titre-et-element-primaire">4 ième et 2 ième Orbite</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Au PeT 0, faire un poussée pour diminuer le DTmin</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Au PeT 0, faire un poussée pour diminuer le DTmin</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-docking-avec-iss">
@@ -166,7 +166,9 @@
                             <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 300</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Le cap sera <kbd>90</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE (DGIV)</li>
+                            <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> 90 </strong><kbd>ENTER</kbd></li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd>E (EXE)</kbd></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-ejection-vers-lune">
@@ -176,11 +178,12 @@
                             <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
                             <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TLI</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite)</li>
                             <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
                             <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-correction-vers-lune">
@@ -191,11 +194,12 @@
                             <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TLCC</kbd></li>
                             <li class="list-group-item element-primaire"><kbd class="petit">PeA</kbd><kbd class="petit">110.00k</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite selon éjection lunaire)</li>
                             <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
                             <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-insertion-orbite-lunaire">
@@ -204,22 +208,24 @@
                             <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program LOI
                             <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite selon correction lunaire)</li>
                             <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
                             <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-aligner-base-orbite-lunaire">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">BASE SYNC MFD (À gauche selon insertion orbite lunaire)</li>
+                            <li class="list-group-item titre-et-element-primaire">BASE SYNC MFD (Baisser le PeA à 10 K)</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à l'opposé de la base (lignes jaune)</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">Retrograde</kbd><kbd class="petit">Poussée</kbd><kbd class="petit">PeA = 10.000k</kbd></li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">Retrograde</kbd><kbd class="petit">Poussée</kbd><kbd class="petit">PeA = 10.000k</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">BASE SYNC MFD (Aligner la trajectoire de la base)</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à la node carrée vide (normal -)</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à la node carrée plein (normal +)</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">Petite poussée</kbd><kbd class="petit">Dist <= 10.000</kbd></li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">Petite poussée</kbd><kbd class="petit">Dist <= 10.000</kbd></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-alunir-base-lunaire">
@@ -235,12 +241,12 @@
                             <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">REF</kbd><kbd class="petit">Moon</kbd> <kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">VOR/VTOL MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">DIST</kbd><kbd class="petit">= Début Freinage rétro + 20%</kbd> <kbd class="petit">CTRL -</kbd></li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">DIST</kbd><kbd class="petit">= Début Freinage rétro + 20%</kbd> <kbd class="petit">CTRL -</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">Quand VSPD = 40.00</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">GEAR DOWN</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">RETRO DOOR</kbd> <kbd class="petit">OPEN</kbd> </li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">HOVER DOOR</kbd> <kbd class="petit">OPEN</kbd> </li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">PRO200SPEC8</kbd> Taux de descente contrôlé à 40.00</li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">GEAR DOWN</kbd></li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">RETRO DOOR</kbd> <kbd class="petit">OPEN</kbd> </li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">HOVER DOOR</kbd> <kbd class="petit">OPEN</kbd> </li>
+                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">PRO200SPEC8</kbd> Taux de descente contrôlé à 40.00</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-circulariser">
@@ -251,14 +257,14 @@
                             <li class="list-group-item element-primaire"><kbd>MD</kbd> Mode - Time to Apoapsis ou Periapsis</li>
                             <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Selon le ApT ou le PeT positionner la croix au centre</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque ApT ou PeT est à zero, faire <kbd>AB</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque ApT ou PeT est à zero, faire <kbd>AB</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">BURN TIME MFD</li>
                             <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>Circ</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (augmente le PeA OU ApA)</li>
                             <li class="list-group-item element-primaire"><kbd>RetroGrade</kbd> Pour se mettre en rétrograde (diminue le PeA OU ApA)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendre la mise à feu et l'exécution</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Attendre la mise à feu et l'exécution</li>
                         </ul>
                     </div>
                 </div>
