@@ -38,6 +38,8 @@
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-navette">[ISS] Décollage Navette vers</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-dgiv">[ISS] Décollage DGIV vers</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-avec-iss">[ISS] Aligner avec</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-determiner-synchroniser-navette">[ISS] Déterminer Rencontre ISS / NAVETTE</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-determiner-synchroniser-dgiv">[ISS] Déterminer Rencontre ISS / DGIV</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-synchroniser-orbite-iss">[ISS] Synchroniser orbite avec</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-docking-avec-iss">[ISS] Docking avec</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-calcul-lancement-vers-lune">[LUNE] Calcul de lancement</a>
@@ -105,28 +107,54 @@
                             <li class="list-group-item element-primaire">ALIGN ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
-                    <div class="tab-pane" id="list-synchroniser-orbite-iss">
+                    <div class="tab-pane" id="list-determiner-synchroniser-navette">
                         <ul class="list-group">
                             <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd> <kbd class="petit">FRM</kbd><kbd class="petit">EQU</kbd> <kbd class="petit">PRJ</kbd><kbd class="petit">SHP</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
                             <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Grâce au ORBIT MFD et MAP MFD, déterminer si le PEA ou APA est au soleil</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si PEA est au soleil, noter l'ISS à mon PeT 0</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si APA est au soleil, noter l'ISS à mon ApT 0</li>
+                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
                             <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (sur la croix pour navette)</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
                                 <i class="bi-sunrise" style="font-size: 1rem;"></i>
-                                Faire une petite poussée pour 375K ApA
+                                Faire une poussée pour augmenter ApA ou PeA selon l'ISS
                             </li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque le ISS est à 0 de mon PeA, noter le ALT en jaune</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque mon vaisseau est à 0 de mon ApA, faire une poussée pour que PeA = ALT ISS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-determiner-synchroniser-dgiv">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd> <kbd class="petit">FRM</kbd><kbd class="petit">EQU</kbd> <kbd class="petit">PRJ</kbd><kbd class="petit">SHP</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
+                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Grâce à MAP MFD, déterminer où est le soleil</li>
+                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
+                                <i class="bi-sunrise" style="font-size: 1rem;"></i>
+                                Faire une petite poussée pour augmenter ApA ou PeA pour déterminer le point de rencontre
+                            </li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si PEA est au soleil, noter l'ISS à mon PeT 0</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si APA est au soleil, noter l'ISS à mon ApT 0</li>
+                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde </li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Faire une poussée pour augmenter ApA ou PeA selon l'ISS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-synchroniser-orbite-iss">
+                        <ul class="list-group">
                             <li class="list-group-item titre-et-element-primaire">SYNC ORBIT MFD</li>
                             <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> Sh Periapsis ou Sh Apoapsis (selon le point de rencontre)</li>
                             <li class="list-group-item element-primaire"><kbd>LEN</kbd> 10</li>
                             <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (sur la croix pour navette)</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer le temps</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Au PeT 0, faire un poussée pour diminuer le DTmin</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">À la ligne verte, faire un poussée pour diminuer le DTmin</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque mon vaisseau est sur la 5ième orbite, faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item titre-et-element-primaire">4 ième et 2 ième Orbite</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Au PeT 0, faire un poussée pour diminuer le DTmin</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">À la ligne verte, faire un poussée pour diminuer le DTmin</li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-docking-avec-iss">
