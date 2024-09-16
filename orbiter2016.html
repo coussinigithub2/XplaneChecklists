@@ -43,6 +43,7 @@
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-synchroniser-orbite-iss">[ISS] Synchroniser orbite avec</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-docking-avec-iss">[ISS] Docking avec</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-calcul-lancement-vers-lune">[LUNE] Calcul de lancement</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-vers-lune">[LUNE] Décollage (divers)</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-ejection-vers-lune">[LUNE] Éjection vers (TLI)</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-correction-vers-lune">[LUNE] Correction vers (TLCC) à PeT 100.00k</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-insertion-orbite-lunaire">[LUNE] Insertion orbite lunaire (LOI) à PeT 3000</a>
@@ -194,9 +195,16 @@
                             <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
                             <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 300</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane active show" id="list-decollage-vers-lune">
+                        <ul class="list-group">
                             <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE (DGIV)</li>
                             <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> 90 </strong><kbd>ENTER</kbd></li>
                             <li class="list-group-item element-primaire list-group-item-danger"><kbd>E (EXE)</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">XR2 OVERHEAD</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">INITIALISATION XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-initialisation"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">VEILLE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-veille"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-ejection-vers-lune">
@@ -374,6 +382,60 @@
                         <li class="list-group-item element-primaire"><kbd>+</kbd> Clavier numerique</li>
                         <li class="list-group-item element-primaire"><kbd>/</kbd> Translation</li>
                         <li class="list-group-item element-primaire"><kbd>6</kbd> ou <kbd>9</kbd> Pour affiner</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal XR2 Initialisation -->                       
+    <div class="modal" id="modal-xr2-initialisation" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">XR2 Initialisation</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">OVERHEAD</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">F4</kbd> <kbd class="petit">CTRL-H</kbd></li>
+                        <li class="list-group-item element-primaire">APU <kbd>ON</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">CABIN HATCH OPEN</kbd> <kbd class="petit">RADIATOR DEPLOY</kbd> <kbd class="petit">HOVERS DOORS OPEN</kbd></li>
+                        <li class="list-group-item element-primaire">APU <kbd>OFF</kbd></li>
+                        <li class="list-group-item element-primaire element-lumiere"><kbd class="petit">NAV ON</kbd> <kbd class="petit">BEACON ON</kbd> <kbd class="petit">STROBE ON</kbd></li>
+                        <li class="list-group-item element-primaire">TIME & TIMER <kbd>RESET (HOLD SQUARE BUTTONS)</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">PEDESTAL</li>
+                        <li class="list-group-item element-primaire">EXTERNAL COOLING <kbd>ON</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">FUEL OPEN</kbd> <kbd class="petit">LOX HATCH OPEN</kbd></li>
+                        <li class="list-group-item element-primaire">X-FEED <kbd>RCS</kbd></li>
+                        <li class="list-group-item element-primaire">X-FEED <kbd>OFF</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">MAIN OPEN</kbd> <kbd class="petit">SCRAM OPEN</kbd> <kbd class="petit">APU OPEN</kbd> <kbd class="petit">LOX OPEN</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">FUEL CLOSE</kbd> <kbd class="petit">LOX HATCH CLOSE</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal XR2 Veille -->                       
+    <div class="modal" id="modal-xr2-veille" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">XR2 Veille</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">OVERHEAD</li>
+                        <li class="list-group-item element-primaire">APU <kbd>ON</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">CABIN HATCH OPEN</kbd></li>
+                        <li class="list-group-item element-primaire">APU <kbd>OFF</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">PEDESTAL</li>
+                        <li class="list-group-item element-primaire">EXTERNAL COOLING <kbd>ON</kbd></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
