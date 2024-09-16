@@ -49,7 +49,6 @@
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-insertion-orbite-lunaire">[LUNE] Insertion orbite lunaire (LOI) à PeT 3000</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-base-orbite-lunaire">[LUNE] Aligner base orbite lunaire</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-alunir-base-lunaire">[LUNE] Alunir sur une base lunaire</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-circulariser">[DIVERS] Circulariser une orbite</a>
                 </div>
             </div>
             <div class="col-8">
@@ -205,6 +204,7 @@
                             <li class="list-group-item titre-et-element-primaire">XR2 OVERHEAD</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">INITIALISATION XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-initialisation"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">VEILLE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-veille"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">CIRCULARISER<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-circulariser"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-ejection-vers-lune">
@@ -283,24 +283,6 @@
                             <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">RETRO DOOR</kbd> <kbd class="petit">OPEN</kbd> </li>
                             <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">HOVER DOOR</kbd> <kbd class="petit">OPEN</kbd> </li>
                             <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">PRO200SPEC8</kbd> Taux de descente contrôlé à 40.00</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-circulariser">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">INTERPLANETARY MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>MNU</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>MD</kbd> Mode - Time to Apoapsis ou Periapsis</li>
-                            <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Selon le ApT ou le PeT positionner la croix au centre</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque ApT ou PeT est à zero, faire <kbd>AB</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">BURN TIME MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>Circ</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (augmente le PeA OU ApA) (sur la croix pour navette)</li>
-                            <li class="list-group-item element-primaire"><kbd>RetroGrade</kbd> Pour se mettre en rétrograde (diminue le PeA OU ApA) (sur la croix pour navette)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Attendre la mise à feu et l'exécution</li>
                         </ul>
                     </div>
                 </div>
@@ -382,6 +364,37 @@
                         <li class="list-group-item element-primaire"><kbd>+</kbd> Clavier numerique</li>
                         <li class="list-group-item element-primaire"><kbd>/</kbd> Translation</li>
                         <li class="list-group-item element-primaire"><kbd>6</kbd> ou <kbd>9</kbd> Pour affiner</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal Circulariser -->                       
+    <div class="modal" id="modal-circulariser" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">CIRCULARISER</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">INTERPLANETARY MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>MNU</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>MD</kbd> Mode - Time to Apoapsis ou Periapsis</li>
+                        <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Selon le ApT ou le PeT positionner la croix au centre</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque ApT ou PeT est à zero, faire <kbd>AB</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">BURN TIME MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>Circ</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (augmente le PeA OU ApA) (sur la croix pour navette)</li>
+                        <li class="list-group-item element-primaire"><kbd>RetroGrade</kbd> Pour se mettre en rétrograde (diminue le PeA OU ApA) (sur la croix pour navette)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Attendre la mise à feu et l'exécution</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
