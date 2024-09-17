@@ -201,10 +201,12 @@
                             <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE (DGIV)</li>
                             <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> 90 </strong><kbd>ENTER</kbd></li>
                             <li class="list-group-item element-primaire list-group-item-danger"><kbd>E (EXE)</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">XR2 OVERHEAD</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">INITIALISATION XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-initialisation"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">VEILLE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-veille"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">CIRCULARISER<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-circulariser"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item titre-et-element-primaire">PILOTAGE XR2</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">INITIALISATION XR2 AVANT DÉPART DU SOL<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-initialisation"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">1- VEILLE XR2 (PRÉPARATION MFD)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-veille"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">2- DÉPART 1 (REVEIL)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-reveil"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">3- DÉCOLLAGE (TERRE)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-decollage-terre"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">4- CIRCULARISER<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-circulariser"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-ejection-vers-lune">
@@ -445,10 +447,73 @@
                     <ul class="list-group">
                         <li class="list-group-item titre-et-element-primaire">OVERHEAD</li>
                         <li class="list-group-item element-primaire">APU <kbd>ON</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">CABIN HATCH OPEN</kbd></li>
+                        <li class="list-group-item element-primaire">CABIN HATCH <kbd>OPEN</kbd></li>
                         <li class="list-group-item element-primaire">APU <kbd>OFF</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">MAIN PANEL</li>
+                        <li class="list-group-item element-primaire">AF CTRL <kbd>ON</kbd></li>
+                        <li class="list-group-item element-primaire">ATTITUDE HOLD AUTOPILOT <kbd>2</kbd></li>
+                        <li class="list-group-item element-primaire">ATTITUDE HOLD AUTOPILOT <kbd>+45 degré</kbd></li>
+                        <li class="list-group-item element-primaire">ALIGN PLAN MFD <kbd>TARGET ISS; MOON</kbd></li>
+                        <li class="list-group-item element-primaire">ORBIT MFD <kbd>TARGET ISS; MOON</kbd></li>
                         <li class="list-group-item titre-et-element-primaire">PEDESTAL</li>
                         <li class="list-group-item element-primaire">EXTERNAL COOLING <kbd>ON</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal XR2 Reveil -->                       
+    <div class="modal" id="modal-xr2-reveil" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">XR2 Réveil</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">OVERHEAD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">APU ON</kbd> <kbd class="petit">CABIN HATCH CLOSE</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">PEDESTAL</li>
+                        <li class="list-group-item element-primaire">EXTERNAL COOLING <kbd>OFF</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal XR2 Décollage Terre -->                       
+    <div class="modal" id="modal-xr2-decollage-terre" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">XR2 Décollage Terre</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">PILOTAGE</li>
+                        <li class="list-group-item element-primaire">MAIN <kbd>FULL</kbd></li>
+                        <li class="list-group-item element-primaire">V1 <kbd>GEAR UP</kbd></li>
+                        <li class="list-group-item element-primaire">MAIN THRUST<kbd>50%</kbd></li>
+                        <li class="list-group-item element-primaire">VIRAGE <kbd>CAP POUR ALIGNEMENT</kbd> PITCH 10</li>
+                        <li class="list-group-item element-primaire">ATTITUDE HOLD AUTOPILOT <kbd>ENGAGE</kbd></li>
+                        <li class="list-group-item element-primaire">MAIN THRUST<kbd>FULL</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">KILOMÉTRAGE OU MACH VALUE</li>
+                        <li class="list-group-item element-primaire">15 KM      <kbd>NUM 8</kbd> <kbd>15 DEGRÉ</kbd></li>
+                        <li class="list-group-item element-primaire">20 KM      <kbd>NUM 8</kbd> <kbd>05 DEGRÉ</kbd></li>
+                        <li class="list-group-item element-primaire">MACH 3     <kbd>SCRAM DOOR</kbd> <kbd>OPEN</kbd></li>
+                        <li class="list-group-item element-primaire">MACH 3     <kbd>SCRAM THRUST</kbd> <kbd>FULL</kbd></li>
+                        <li class="list-group-item element-primaire">EN VOL     <kbd class="petit">NUM 8</kbd> <kbd class="petit">NUM 2</kbd> MAINTENIR 100 - 200 M/S</li>
+                        <li class="list-group-item element-primaire">EN VOL     <kbd class="petit">NUM 4</kbd> <kbd class="petit">NUM 6</kbd> DIMINUER RINC</li>
+                        <li class="list-group-item element-primaire">SCRAM TEMP <kbd class="petit">SCRAM THRUST CUT</kbd> <kbd class="petit">SCRAM DOOR CLOSE</kbd></li>
+                        <li class="list-group-item element-primaire">APA 200 KM <kbd>MAIN THRUST</kbd> <kbd>CUT</kbd></li>
+                        <li class="list-group-item element-primaire">APA 200 KM <kbd>RADIATOR</kbd> <kbd>DEPLOY</kbd></li>
+                        <li class="list-group-item element-primaire">APA 200 KM <kbd>PROGRADE</kbd>
+                        <li class="list-group-item element-primaire">APA 200 KM <kbd>APU</kbd> <kbd>OFF</kbd>
                     </ul>
                 </div>
                 <div class="modal-footer">
