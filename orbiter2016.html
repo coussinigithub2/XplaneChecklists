@@ -34,263 +34,494 @@
             <div class="col-4">
                 <h1 class="text-muted">Checklist</h1>
                 <div class="list-group defile" id="list-tab">
-                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-calcul-lancement-vers-iss">[ISS] Calcul de lancement</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-navette">[ISS] Décollage Navette vers</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-dgiv">[ISS] Décollage DGIV vers</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-avec-iss">[ISS] Aligner avec</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-determiner-synchroniser-navette">[ISS] Déterminer Rencontre ISS / NAVETTE</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-determiner-synchroniser-dgiv">[ISS] Déterminer Rencontre ISS / DGIV</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-synchroniser-orbite-iss">[ISS] Synchroniser orbite avec</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-docking-avec-iss">[ISS] Docking avec</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-calcul-lancement-vers-lune">[LUNE] Calcul de lancement</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-decollage-vers-lune">[LUNE] Décollage (divers)</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-ejection-vers-lune">[LUNE] Éjection vers (TLI)</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-correction-vers-lune">[LUNE] Correction vers (TLCC) à PeT 100.00k</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-insertion-orbite-lunaire">[LUNE] Insertion orbite lunaire (LOI) à PeT 3000</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-aligner-base-orbite-lunaire">[LUNE] Aligner base orbite lunaire</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-alunir-base-lunaire">[LUNE] Alunir sur une base lunaire</a>
+                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-destination-iss">Destination [ISS]</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-destination-lune">Destination [LUNE]</a>
                 </div>
             </div>
             <div class="col-8">
                 <h1 class="text-muted">Items</h1>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane active show" id="list-calcul-lancement-vers-iss">
+                    <div class="tab-pane active show" id="list-destination-iss">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">DSP</kbd><kbd class="petit">Orbiter lines</kbd><kbd class="petit">Orbit plane</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>TRK</kbd> Et <kbd>ZM+</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">MAP MFD</kbd><kbd class="petit">en bas SHP:</kbd><kbd class="petit">Degre N/S</kbd> <strong>Pour déterminer la lalitude</strong></li>
-                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD: DÉTERMINER L'INCLINAISON DE ISS</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>FRM</kbd> et <kbd>MOD</kbd> et <kbd>DST</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le INC en Jaune</li>
-                            <li class="list-group-item titre-et-element-primaire">CALCUL DU CAP</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">CALCULER LE CAP<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-calcule-cap"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item titre-et-element-primaire">DESTINATION ISS</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">1- CALCUL DU LANCEMENT<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-calcul-de-lancement"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">2A- DÉCOLLAGE NAVETTE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-decollage-navette"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">2B- DÉCOLLAGE DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-decollage-dgiv"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">3- ALIGNEMENT<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-alignement"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">4A- DÉTERMINER RENCONTRE AVEC NAVETTE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-determiner-rencontre-navette"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">4B- DÉTERMINER RENCONTRE AVEC DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-determiner-rencontre-dgiv"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">5- SYNCHRONISER ORBITE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-synchroniser-orbite"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">6- DOCKING AVEC DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-docking-dgiv"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
-                    <div class="tab-pane" id="list-decollage-navette">
+                    <div class="tab-pane" id="list-destination-lune">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement</li>
-                            <li class="list-group-item titre-et-element-primaire">TERMINAL MFD (ORBITER 2010)</li>
-                            <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "run('atlantis/launch')" </strong></li>
-                            <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "orbit_alt=250e3" </strong> Altitude = 250KM</li>
-                            <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "azimuth=139*RAD" </strong> Azimuth = 139 degré, sinon 90 degré</li>
-                            <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "do_oms2=false" </strong> Pas de OMS2</li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd>INP</kbd> <strong> "launch()" </strong> À TN 305</li>
-                            <li class="list-group-item titre-et-element-primaire">ASCENT AP MFD (ORBITER 2016)</li>
-                            <li class="list-group-item element-primaire"><kbd>AZ+</kbd><strong> "inclinaison ISS (Orbit Inc.)" </strong></li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd>L</kbd> Pour le lancement</li>
-                            <li class="list-group-item titre-et-element-primaire">OUVERTURE DE LA SOUTE LORSQUE ACT N'EST PLUS EN SURBRILLANCE</li>
-                            <li class="list-group-item element-primaire"><kbd>K</kbd> ouverture de la soute</li>
-                            <li class="list-group-item element-primaire"><kbd>CTRL-U</kbd> ouverture de l'antenne KU-BAND</li>
-                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (SUITE)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-decollage-dgiv">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement</li>
-                            <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE</li>
-                            <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> "cap du calcul" </strong><kbd>ENTER</kbd></li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd>E (EXE)</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (SUITE)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser <kbd>4</kbd> ou <kbd>6</kbd> pour réduire le rinc</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-aligner-avec-iss">
-                        <ul class="list-group">
-                            <li class="list-group-item element-primaire">ALIGN ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-determiner-synchroniser-navette">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd> <kbd class="petit">FRM</kbd><kbd class="petit">EQU</kbd> <kbd class="petit">PRJ</kbd><kbd class="petit">SHP</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
-                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Grâce au ORBIT MFD et MAP MFD, déterminer si le PEA ou APA est au soleil</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si PEA est au soleil, noter l'ISS à mon PeT 0</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si APA est au soleil, noter l'ISS à mon ApT 0</li>
-                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (sur la croix pour navette)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
-                                <i class="bi-sunrise" style="font-size: 1rem;"></i>
-                                Faire une poussée pour augmenter ApA ou PeA selon l'ISS
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-determiner-synchroniser-dgiv">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd> <kbd class="petit">FRM</kbd><kbd class="petit">EQU</kbd> <kbd class="petit">PRJ</kbd><kbd class="petit">SHP</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
-                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Grâce à MAP MFD, déterminer où est le soleil</li>
-                            <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
-                                <i class="bi-sunrise" style="font-size: 1rem;"></i>
-                                Faire une petite poussée pour augmenter ApA ou PeA pour déterminer le point de rencontre
-                            </li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si PEA est au soleil, noter l'ISS à mon PeT 0</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Si APA est au soleil, noter l'ISS à mon ApT 0</li>
-                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde </li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Faire une poussée pour augmenter ApA ou PeA selon l'ISS</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-synchroniser-orbite-iss">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">SYNC ORBIT MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
-                            <li class="list-group-item element-primaire"><kbd>MOD</kbd> Sh Periapsis ou Sh Apoapsis (selon le point de rencontre)</li>
-                            <li class="list-group-item element-primaire"><kbd>LEN</kbd> 10</li>
-                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (sur la croix pour navette)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer le temps</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">À la ligne verte, faire un poussée pour diminuer le DTmin</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque mon vaisseau est sur la 5ième orbite, faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item titre-et-element-primaire">4 ième et 2 ième Orbite</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">À la ligne verte, faire un poussée pour diminuer le DTmin</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-docking-avec-iss">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">OBJECT INFO (en haut de l'écran)</li>
-                            <li class="list-group-item element-primaire"><kbd>VESSEL</kbd> ISS</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le XPDR</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le port du dock libre</li>
-                            <li class="list-group-item titre-et-element-primaire">COM NAV MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>NAV1</kbd> port du dock libre</li>
-                            <li class="list-group-item element-primaire"><kbd>NAV2</kbd> XPDR (transpondeur ISS)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Quand NAV1 a 2 barre <i class="bi-reception-2" style="font-size: 2rem;"></i></li>
-                            <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE DGIV</li>
-                            <li class="list-group-item element-primaire"><kbd>H</kbd> Pour afficher le HUD Docking</li>
-                            <li class="list-group-item element-primaire"><kbd>PRO300SPEC0</kbd> Auto docking</li>
-                            <li class="list-group-item titre-et-element-primaire">DOCKING MFD (DGIV)</li>
-                            <li class="list-group-item element-primaire"><kbd>HUD</kbd> Pour voir le HUD ISS Docking</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Ouvrir le nez pour docking</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Suivre le déroullement</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-calcul-lancement-vers-lune">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">Mod</kbd><kbd class="petit">Surface</kbd> <kbd class="petit">Frm</kbd><kbd class="petit">Earth Equ</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">RECALLER LE MOMENT DU DÉCOLLAGE</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 1000</li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Config</li>
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Changer le Countdown pour la date actuelle avec <kbd>SET</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Exemple '12-dec-2016 02:30:00' <kbd>ENTER</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 300</li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-decollage-vers-lune">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE (DGIV)</li>
-                            <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> 90 </strong><kbd>ENTER</kbd></li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd>E (EXE)</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">PILOTAGE XR2</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">1- INITIALISATION XR2 AVANT DÉPART DU SOL<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-initialisation"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">2- VEILLE XR2 (PRÉPARATION MFD)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-veille"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">3- DÉPART 1 (REVEIL)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-reveil"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">4- DÉCOLLAGE (TERRE)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-decollage-terre"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">5- CIRCULARISER<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-circulariser"><i class="fa fa-external-link"></i></button></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-ejection-vers-lune">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TLI</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite)</li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-correction-vers-lune">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche selon éjection lunaire)</li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TLCC</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">PeA</kbd><kbd class="petit">110.00k</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite selon éjection lunaire)</li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-insertion-orbite-lunaire">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche selon correction lunaire)</li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program LOI
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite selon correction lunaire)</li>
-                            <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
-                            <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
-                            <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
-                            <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-aligner-base-orbite-lunaire">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">BASE SYNC MFD (Baisser le PeA à 10 K)</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à l'opposé de la base (lignes jaune)</li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">Retrograde</kbd><kbd class="petit">Poussée</kbd><kbd class="petit">PeA = 10.000k</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">BASE SYNC MFD (Aligner la trajectoire de la base)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à la node carrée vide (normal -)</li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à la node carrée plein (normal +)</li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">Petite poussée</kbd><kbd class="petit">Dist <= 10.000</kbd></li>
-                        </ul>
-                    </div>
-                    <div class="tab-pane" id="list-alunir-base-lunaire">
-                        <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">SE METTRE À L'HORIZONTAL</li>
-                            <li class="list-group-item element-primaire">F8 (External) <kbd class="petit">Prograde</kbd> <kbd class="petit">Horizon Level</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">COM NAV MFD</li>
-                            <li class="list-group-item element-primaire"><kbd>NAV1</kbd> cible d'alunissage (PAD) libre</li>
-                            <li class="list-group-item element-primaire"><kbd>NAV2</kbd> VOR (116.30)</li>
-                            <li class="list-group-item titre-et-element-primaire">BURN TIME MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">ENG</kbd><kbd class="petit">Retro</kbd> <kbd class="petit">DV</kbd><kbd class="petit">TAS en haut arrondi (1700)</kbd> Notez le Rel. Deltas Distances (début freinage rétro)</li>
-                            <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
-                            <li class="list-group-item element-primaire"><kbd class="petit">REF</kbd><kbd class="petit">Moon</kbd> <kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">VOR/VTOL MFD</li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">DIST</kbd><kbd class="petit">= Début Freinage rétro + 20%</kbd> <kbd class="petit">CTRL -</kbd></li>
-                            <li class="list-group-item titre-et-element-primaire">PREPAREZ AUTOPILOT</li>
-                            <li class="list-group-item element-primaire list-group-item-danger">DGIV <kbd class="petit">PRO200SPEC8</kbd> Taux de descente contrôlé à 40.00</li>
-                            <li class="list-group-item element-primaire list-group-item-danger">XR2 <kbd class="petit">1</kbd><kbd class="petit">-40 DEGRÉ</kbd> Taux de descente contrôlé à 40.00</li>
-                            <li class="list-group-item titre-et-element-primaire">Quand VSPD = 40.00</li>
-                            <li class="list-group-item element-primaire list-group-item-danger">XR2 <kbd class="petit">APU ON</kbd></li>
-                            <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">GEAR DOWN</kbd> <kbd class="petit">RETRO DOOR OPEN</kbd> <kbd class="petit">HOVER DOOR OPEN</kbd> <kbd class="petit">AUTOPILOT EXEC</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">DESTINATION LUNE</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">1- CALCUL DU LANCEMENT<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-calcul-de-lancement"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">2A- DÉCOLLAGE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-decollage-xr2"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">2B- DÉCOLLAGE DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-decollage-dgiv"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">3- TLI<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-tli"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">4- CORRECTION DE MI-PARCOURS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-correction-mi-parcours"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">5- LOI<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-loi"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">6- ALIGNER LA BASE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-aligner-base"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">7- ALUNISSAGE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-alunissage-xr2"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>    
-    </div>    
+    </div>   
+    <!--    modal ISS calcul de lancement -->                       
+    <div class="modal" id="modal-iss-calcul-de-lancement" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISS - CALCUL DE LANCEMENT</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">DSP</kbd><kbd class="petit">Orbiter lines</kbd><kbd class="petit">Orbit plane</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>TRK</kbd> Et <kbd>ZM+</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">MAP MFD</kbd><kbd class="petit">en bas SHP:</kbd><kbd class="petit">Degre N/S</kbd> <strong>Pour déterminer la lalitude</strong></li>
+                        <li class="list-group-item titre-et-element-primaire">ORBIT MFD: DÉTERMINER L'INCLINAISON DE ISS</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>FRM</kbd> et <kbd>MOD</kbd> et <kbd>DST</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le INC en Jaune</li>
+                        <li class="list-group-item titre-et-element-primaire">CALCUL DU CAP</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">CALCULER LE CAP<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-calcule-cap"><i class="fa fa-external-link"></i></button></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal ISS décollage navette -->                       
+    <div class="modal" id="modal-iss-decollage-navette" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISS - DÉCOLLAGE NAVETTE</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement</li>
+                        <li class="list-group-item titre-et-element-primaire">TERMINAL MFD (ORBITER 2010)</li>
+                        <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "run('atlantis/launch')" </strong></li>
+                        <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "orbit_alt=250e3" </strong> Altitude = 250KM</li>
+                        <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "azimuth=139*RAD" </strong> Azimuth = 139 degré, sinon 90 degré</li>
+                        <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "do_oms2=false" </strong> Pas de OMS2</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd>INP</kbd> <strong> "launch()" </strong> À TN 305</li>
+                        <li class="list-group-item titre-et-element-primaire">ASCENT AP MFD (ORBITER 2016)</li>
+                        <li class="list-group-item element-primaire"><kbd>AZ+</kbd><strong> "inclinaison ISS (Orbit Inc.)" </strong></li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd>L</kbd> Pour le lancement</li>
+                        <li class="list-group-item titre-et-element-primaire">OUVERTURE DE LA SOUTE LORSQUE ACT N'EST PLUS EN SURBRILLANCE</li>
+                        <li class="list-group-item element-primaire"><kbd>K</kbd> ouverture de la soute</li>
+                        <li class="list-group-item element-primaire"><kbd>CTRL-U</kbd> ouverture de l'antenne KU-BAND</li>
+                        <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (SUITE)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal ISS décollage dgiv -->                       
+    <div class="modal" id="modal-iss-decollage-dgiv" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISS - DÉCOLLAGE DGIV</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement</li>
+                        <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE</li>
+                        <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> "cap du calcul" </strong><kbd>ENTER</kbd></li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd>E (EXE)</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (SUITE)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">A la vitesse TAS 500, utiliser <kbd>4</kbd> ou <kbd>6</kbd> pour réduire le rinc</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal ISS alignement -->                       
+    <div class="modal" id="modal-iss-alignement" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISS - ALIGNEMENT</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si on s'approche de AN) <kbd>NORMAL-</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si on s'approche de DN) <kbd>NORMAL+</kbd></li>
+                        <li class="list-group-item element-primaire element-lumiere">Attendre Engage Thrust</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> Clavier numerique</li>
+                        <li class="list-group-item element-primaire"><kbd>/</kbd> Translation</li>
+                        <li class="list-group-item element-primaire"><kbd>6</kbd> ou <kbd>9</kbd> Pour affiner</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal ISS déterminer rencontre navette -->                       
+    <div class="modal" id="modal-iss-determiner-rencontre-navette" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISS - DÉTERMINER RENCONTRE NAVETTE</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd> <kbd class="petit">FRM</kbd><kbd class="petit">EQU</kbd> <kbd class="petit">PRJ</kbd><kbd class="petit">SHP</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
+                        <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Grâce au ORBIT MFD et MAP MFD, déterminer si le PEA ou APA est au soleil</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si PEA est au soleil, noter l'ISS à mon PeT 0</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si APA est au soleil, noter l'ISS à mon ApT 0</li>
+                        <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (sur la croix pour navette)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
+                            <i class="bi-sunrise" style="font-size: 1rem;"></i>
+                            Faire une poussée pour augmenter ApA ou PeA selon l'ISS
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal ISS déterminer rencontre dgiv -->                       
+    <div class="modal" id="modal-iss-determiner-rencontre-dgiv" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISS - DÉTERMINER RENCONTRE DGIV</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd> <kbd class="petit">FRM</kbd><kbd class="petit">EQU</kbd> <kbd class="petit">PRJ</kbd><kbd class="petit">SHP</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
+                        <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Grâce à MAP MFD, déterminer où est le soleil</li>
+                        <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
+                            <i class="bi-sunrise" style="font-size: 1rem;"></i>
+                            Faire une petite poussée pour augmenter ApA ou PeA pour déterminer le point de rencontre
+                        </li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si PEA est au soleil, noter l'ISS à mon PeT 0</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si APA est au soleil, noter l'ISS à mon ApT 0</li>
+                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde </li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Faire une poussée pour augmenter ApA ou PeA selon l'ISS</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal ISS synchroniser orbite -->                       
+    <div class="modal" id="modal-iss-synchroniser-orbite" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISS - SYNCHRONISER ORBITE</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">SYNC ORBIT MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
+                        <li class="list-group-item element-primaire"><kbd>MOD</kbd> Sh Periapsis ou Sh Apoapsis (selon le point de rencontre)</li>
+                        <li class="list-group-item element-primaire"><kbd>LEN</kbd> 10</li>
+                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (sur la croix pour navette)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer le temps</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">À la ligne verte, faire un poussée pour diminuer le DTmin</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque mon vaisseau est sur la 5ième orbite, faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
+                        <li class="list-group-item titre-et-element-primaire">4 ième et 2 ième Orbite</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">À la ligne verte, faire un poussée pour diminuer le DTmin</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal ISS docking dgiv -->                       
+    <div class="modal" id="modal-iss-docking-dgiv" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ISS - DOCKING DGIV</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">OBJECT INFO (en haut de l'écran)</li>
+                        <li class="list-group-item element-primaire"><kbd>VESSEL</kbd> ISS</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le XPDR</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Notez le port du dock libre</li>
+                        <li class="list-group-item titre-et-element-primaire">COM NAV MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>NAV1</kbd> port du dock libre</li>
+                        <li class="list-group-item element-primaire"><kbd>NAV2</kbd> XPDR (transpondeur ISS)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Quand NAV1 a 2 barre <i class="bi-reception-2" style="font-size: 2rem;"></i></li>
+                        <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE</li>
+                        <li class="list-group-item element-primaire"><kbd>H</kbd> Pour afficher le HUD Docking</li>
+                        <li class="list-group-item element-primaire"><kbd>PRO300SPEC0</kbd> Auto docking</li>
+                        <li class="list-group-item titre-et-element-primaire">DOCKING MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>HUD</kbd> Pour voir le HUD ISS Docking</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Ouvrir le nez pour docking</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Suivre le déroullement</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE calcul du lancement -->                       
+    <div class="modal" id="modal-lune-calcul-de-lancement" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - CALCUL DU LANCEMENT</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Mod</kbd><kbd class="petit">Surface</kbd> <kbd class="petit">Frm</kbd><kbd class="petit">Earth Equ</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">RECALLER LE MOMENT DU DÉCOLLAGE</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 1000</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Config</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Changer le Countdown pour la date actuelle avec <kbd>SET</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Exemple '12-dec-2016 02:30:00' <kbd>ENTER</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer la simulation jusqu'à TLn 300</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE décollage XR2 -->                       
+    <div class="modal" id="modal-lune-decollage-xr2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - DÉCOLLAGE XR2</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">PILOTAGE XR2</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">1- INITIALISATION XR2 AVANT DÉPART DU SOL<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-initialisation"><i class="fa fa-external-link"></i></button></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">2- VEILLE XR2 (PRÉPARATION MFD)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-veille"><i class="fa fa-external-link"></i></button></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">3- DÉPART 1 (REVEIL)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-reveil"><i class="fa fa-external-link"></i></button></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">4- DÉCOLLAGE (TERRE)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-decollage-terre"><i class="fa fa-external-link"></i></button></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE décollage dgiv -->                       
+    <div class="modal" id="modal-lune-decollage-dgiv" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - DÉCOLLAGE DGIV</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">PILOTAGE DGIV</li>
+                        <li class="list-group-item element-primaire"><kbd>P904S (PRO904SPEC)</kbd><strong> SELON CAP </strong><kbd>ENTER</kbd></li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd>E (EXE)</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE tli -->                       
+    <div class="modal" id="modal-lune-tli" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - TLI</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TLI</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE correction de mi-parcours -->                       
+    <div class="modal" id="modal-lune-correction-mi-parcours" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - CORRECTION DE MI-PARCOURS</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche selon éjection lunaire)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TLCC</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">PeA</kbd><kbd class="petit">110.00k</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite selon éjection lunaire)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE loi -->                       
+    <div class="modal" id="modal-lune-loi" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - LOI</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche selon correction lunaire)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program LOI
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite selon correction lunaire)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE aligner la base -->                       
+    <div class="modal" id="modal-lune-aligner-base" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - ALIGNER LA BASE</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">BASE SYNC MFD (Baisser le PeA à 10 K)</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à l'opposé de la base (lignes jaune)</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">Retrograde</kbd><kbd class="petit">Poussée</kbd><kbd class="petit">PeA = 10.000k</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">BASE SYNC MFD (Aligner la trajectoire de la base)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à la node carrée vide (normal -)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Lorsque l'on est à la node carrée plein (normal +)</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">Petite poussée</kbd><kbd class="petit">Dist <= 10.000</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE alunissage xr2 -->                       
+    <div class="modal" id="modal-lune-alunissage-xr2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - ALUNISSAGE XR2</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">SE METTRE À L'HORIZONTAL</li>
+                        <li class="list-group-item element-primaire">F8 (External) <kbd class="petit">Prograde</kbd> <kbd class="petit">Horizon Level</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">COM NAV MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>NAV1</kbd> cible d'alunissage (PAD) libre</li>
+                        <li class="list-group-item element-primaire"><kbd>NAV2</kbd> VOR (116.30)</li>
+                        <li class="list-group-item titre-et-element-primaire">BURN TIME MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">ENG</kbd><kbd class="petit">Retro</kbd> <kbd class="petit">DV</kbd><kbd class="petit">TAS en haut arrondi (1700)</kbd> Notez le Rel. Deltas Distances (début freinage rétro)</li>
+                        <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">REF</kbd><kbd class="petit">Moon</kbd> <kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">VOR/VTOL MFD</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">DIST</kbd><kbd class="petit">= Début Freinage rétro + 20%</kbd> <kbd class="petit">CTRL -</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">PREPAREZ AUTOPILOT</li>
+                        <li class="list-group-item element-primaire list-group-item-danger">DGIV <kbd class="petit">PRO200SPEC8</kbd> Taux de descente contrôlé à 40.00</li>
+                        <li class="list-group-item element-primaire list-group-item-danger">XR2 <kbd class="petit">1</kbd><kbd class="petit">-40 DEGRÉ</kbd> Taux de descente contrôlé à 40.00</li>
+                        <li class="list-group-item titre-et-element-primaire">Quand VSPD = 40.00</li>
+                        <li class="list-group-item element-primaire list-group-item-danger">XR2 <kbd class="petit">APU ON</kbd></li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">GEAR DOWN</kbd> <kbd class="petit">RETRO DOOR OPEN</kbd> <kbd class="petit">HOVER DOOR OPEN</kbd> <kbd class="petit">AUTOPILOT EXEC</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--    modal calcule cap here -->                       
     <div class="modal" id="modal-calcule-cap" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -342,31 +573,6 @@
                             document.getElementById("cap2").textContent = "Résultat: " + result2.toFixed(2) + "°";
                         }
                     </script>                           
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--    modal Aligner avec ISS -->                       
-    <div class="modal" id="modal-align-iss" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Aligner avec ISS</h5>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group">
-                        <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd></li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si on s'approche de AN) <kbd>NORMAL-</kbd></li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si on s'approche de DN) <kbd>NORMAL+</kbd></li>
-                        <li class="list-group-item element-primaire element-lumiere">Attendre Engage Thrust</li>
-                        <li class="list-group-item element-primaire"><kbd>+</kbd> Clavier numerique</li>
-                        <li class="list-group-item element-primaire"><kbd>/</kbd> Translation</li>
-                        <li class="list-group-item element-primaire"><kbd>6</kbd> ou <kbd>9</kbd> Pour affiner</li>
-                    </ul>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
