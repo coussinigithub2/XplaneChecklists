@@ -533,23 +533,7 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-group">
-                        <li class="list-group-item titre-et-element-primaire">SE METTRE À L'HORIZONTAL</li>
-                        <li class="list-group-item element-primaire">F8 (External) <kbd class="petit">Prograde</kbd> <kbd class="petit">Horizon Level</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">COM NAV MFD</li>
-                        <li class="list-group-item element-primaire"><kbd>NAV1</kbd> cible d'alunissage (PAD) libre</li>
-                        <li class="list-group-item element-primaire"><kbd>NAV2</kbd> VOR (116.30)</li>
-                        <li class="list-group-item titre-et-element-primaire">BURN TIME MFD</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">ENG</kbd><kbd class="petit">Retro</kbd> <kbd class="petit">DV</kbd><kbd class="petit">TAS en haut arrondi (1700)</kbd> Notez le Rel. Deltas Distances (début freinage rétro)</li>
-                        <li class="list-group-item titre-et-element-primaire">MAP MFD</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">REF</kbd><kbd class="petit">Moon</kbd> <kbd class="petit">Tgt</kbd><kbd class="petit">Brighton Beach</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">VOR/VTOL MFD</li>
-                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">DIST</kbd><kbd class="petit">= Début Freinage rétro + 20%</kbd> <kbd class="petit">CTRL -</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">PREPAREZ AUTOPILOT</li>
-                        <li class="list-group-item element-primaire list-group-item-danger">DGIV <kbd class="petit">PRO200SPEC8</kbd> Taux de descente contrôlé à 40.00</li>
-                        <li class="list-group-item element-primaire list-group-item-danger">XR2 <kbd class="petit">1</kbd><kbd class="petit">-40 DEGRÉ</kbd> Taux de descente contrôlé à 40.00</li>
-                        <li class="list-group-item titre-et-element-primaire">Quand VSPD = 40.00</li>
-                        <li class="list-group-item element-primaire list-group-item-danger">XR2 <kbd class="petit">APU ON</kbd></li>
-                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">GEAR DOWN</kbd> <kbd class="petit">RETRO DOOR OPEN</kbd> <kbd class="petit">HOVER DOOR OPEN</kbd> <kbd class="petit">AUTOPILOT EXEC</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">3- DÉPART 1 (REVEIL)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-reveil"><i class="fa fa-external-link"></i></button></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -736,16 +720,32 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-group">
-                        <li class="list-group-item titre-et-element-primaire">PREPARATIF</li>
-                        <li class="list-group-item element-primaire">ATTITUDE HOLD AUTOPILOT <kbd>2</kbd></li>
-                        <li class="list-group-item element-primaire">ATTITUDE HOLD AUTOPILOT <kbd>+45 degré</kbd></li>
-                        <li class="list-group-item element-primaire">ALIGN PLAN MFD <kbd>TARGET ISS; MOON</kbd></li>
-                        <li class="list-group-item element-primaire">ORBIT MFD <kbd>TARGET ISS; MOON</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez MOD
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour choisir Surface</li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez FRM
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour choisir Earth Equ</li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez PEA
+                        <li class="list-group-item element-primaire"><kbd>SET 110K</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez TLN
+                        <li class="list-group-item element-primaire">AVANCER LA SIMULATION JUSQU'À <kbd> TLn 1000.00</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Config
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Countdown
+                        <li class="list-group-item element-primaire"><kbd>SET </kbd> Date actuel du simu (12-Dec-2016 02:30:00)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TLI
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire">AVANCER LA SIMULATION JUSQU'À <kbd> TLn 300.00</kbd></li>
                         <li class="list-group-item titre-et-element-primaire">PILOTAGE</li>
                         <li class="list-group-item element-primaire">MAIN <kbd>FULL</kbd></li>
                         <li class="list-group-item element-primaire">V1 <kbd>GEAR UP</kbd></li>
                         <li class="list-group-item element-primaire">MAIN THRUST<kbd>50%</kbd></li>
-                        <li class="list-group-item element-primaire">VIRAGE <kbd>CAP POUR ALIGNEMENT</kbd> PITCH 10</li>
+                        <li class="list-group-item element-primaire">VIRAGE <kbd>CAP POUR ALIGNEMENT (selon Hed LUNAR TRANFERT MFD)</kbd> PITCH 10</li>
                         <li class="list-group-item element-primaire">ATTITUDE HOLD AUTOPILOT <kbd>ENGAGE</kbd></li>
                         <li class="list-group-item element-primaire">MAIN THRUST<kbd>FULL</kbd></li>
                         <li class="list-group-item titre-et-element-primaire">KILOMÉTRAGE OU MACH VALUE</li>
@@ -757,7 +757,7 @@
                         <li class="list-group-item element-primaire">EN VOL     <kbd class="petit">NUM 4</kbd> <kbd class="petit">NUM 6</kbd> DIMINUER RINC</li>
                         <li class="list-group-item element-primaire">SCRAM TEMP <kbd class="petit">SCRAM THRUST CUT</kbd> <kbd class="petit">SCRAM DOOR CLOSE</kbd></li>
                         <li class="list-group-item element-primaire">APA 200 KM <kbd>MAIN THRUST</kbd> <kbd>CUT</kbd></li>
-                        <li class="list-group-item element-primaire">APA 200 KM <kbd>RADIATOR</kbd> <kbd>DEPLOY</kbd></li>
+                        <li class="list-group-item element-primaire list-group-item-danger">APA 200 KM <kbd>RADIATOR</kbd> <kbd>DEPLOY</kbd></li>
                         <li class="list-group-item element-primaire">APA 200 KM <kbd>PROGRADE</kbd>
                         <li class="list-group-item element-primaire">APA 200 KM <kbd>APU</kbd> <kbd>OFF</kbd>
                     </ul>
