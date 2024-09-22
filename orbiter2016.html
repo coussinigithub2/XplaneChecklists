@@ -66,6 +66,8 @@
                             <li class="list-group-item element-primaire titre-sans-element-primaire">6- ALIGNER LA BASE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-aligner-base"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">7- ALUNISSAGE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-alunissage-xr2"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">8A- MISE EN ORBITE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-mise-en-orbite-xr2"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">9- TEI<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-tei"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">10- BASE APPROACH VERS TERRE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-base-approach"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                 </div>
@@ -558,6 +560,64 @@
                         <li class="list-group-item element-primaire titre-sans-element-primaire">ATTENDRE APA 110km</li>
                         <li class="list-group-item element-primaire">APU <kbd>OFF</kbd></li>
                         <li class="list-group-item element-primaire titre-sans-element-primaire">CIRCULARISER<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-circulariser"><i class="fa fa-external-link"></i></button></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE TEI -->                       
+    <div class="modal" id="modal-lune-tei" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - TEI</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TEI</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TEI</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd>FrM</kbd> <kbd>Earth Equ</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal LUNE BASE APPROACH (50.000K) VERS TERRE -->                       
+    <div class="modal" id="modal-lune-base-approach" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LUNE - BASE APPROACH (50.000K) VERS TERRE</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program TEI</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">FSt</kbd><kbd class="petit">TEI</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À droite)</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez Program Flight Monitor</li>
+                        <li class="list-group-item element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd>FrM</kbd> <kbd>Earth Equ</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD (À gauche)</li>
+                        <li class="list-group-item element-primaire list-group-item-danger"><kbd class="petit">EXE</kbd><kbd class="petit">DV</kbd><kbd class="petit">EXE</kbd></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
