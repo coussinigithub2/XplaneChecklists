@@ -630,14 +630,22 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-group">
-                        <li class="list-group-item titre-et-element-primaire">BASESYNC MFD (gauche)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">1- DE-ORBIT (TERRE)<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-de-orbit-terre"><i class="fa fa-external-link"></i></button></li>
+
+                        <li class="list-group-item titre-et-element-primaire">BASESYNC MFD (droite)</li>
                         <li class="list-group-item element-primaire"><kbd class="petit">Tgt Cape Canaveral</kbd> On devrais avoir une solution sur #3 ou #4</li>
-                        <li class="list-group-item titre-et-element-primaire">MAP MFD (droite)</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Ref Earth</kbd> <kbd class="petit">Tgt Cape Canaveral</kbd> On dois s'assurer d'être dans le jour</li>
-                        <li class="list-group-item titre-et-element-primaire">BASESYNC MFD (quand on passe l'orbite finale)</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Noeud pour poussée</kbd> Diminuer la Dist latérale</li>
-                        <li class="list-group-item titre-et-element-primaire">MAP MFD (à Dst 19.80)</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">RetroGrade</kbd> <kbd class="petit">Pea 60k</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Noeud pour poussée</kbd> (Quand orbite finale) Diminuer la Dist latérale </li>
+                        <li class="list-group-item titre-et-element-primaire">GLIDESLOPE  MFD (gauche)</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Set Base: </kbd> <kbd class="petit">CFG; Base Cape Canaveral (PB-NB)</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Set Runway</kbd> <kbd class="petit">RWY33 (PR-NR)</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Set GS</kbd> <kbd class="petit">XR Series (PG-NG)</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit option</kbd> <kbd class="petit">DEO</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit screen</kbd> <kbd class="petit">MOD</kbd> <kbd class="petit">MOD</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">BASESYNC MFD (droite)</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Tgt GS</kbd> On devrais avoir la solution de glideslope</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit screen</kbd> <kbd class="petit">DEO</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">GLIDESLOPE  MFD (gauche)</li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Auto Burn: </kbd> <kbd class="petit">AB</kbd> Autoburn: ON (wait)</li>
                         <li class="list-group-item titre-et-element-primaire">PRÉPARATION RE-ENTRY</li>
                         <li class="list-group-item element-primaire"><kbd class="petit">ProGrade</kbd> <kbd class="petit">SRFCE Earth (HUD)</kbd></li>
                         <li class="list-group-item titre-et-element-primaire">100 Km</li>
@@ -835,6 +843,53 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">XR2 Décollage Terre</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item titre-et-element-primaire">LUNAR TRANSFER MFD</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire"><kbd>PRV</kbd> ou <kbd>NXT</kbd> pour sélectionnez
+                        <li class="list-group-item element-primaire titre-sans-element-primaire"><kbd>+</kbd> ou <kbd>-</kbd> pour faire un choix</li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Program TLI</kbd> <kbd class="petit">Mod Surface</kbd> <kbd class="petit">Frm Earth Equ</kbd> <kbd class="petit">PeA 110K</kbd></li>
+                        <li class="list-group-item element-primaire">AVANCER LA SIMULATION JUSQU'À <kbd> TLn 1000.00</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Program Config</kbd> <kbd class="petit">Countdown (SET 21-mar-2001 04:30:00)</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd>PRG</kbd></li>
+                        <li class="list-group-item element-primaire"><kbd class="petit">Program TLI</kbd></li>
+                        <li class="list-group-item element-primaire">AVANCER LA SIMULATION JUSQU'À <kbd> TLn 300.00</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">PILOTAGE</li>
+                        <li class="list-group-item element-primaire">MAIN <kbd>FULL</kbd></li>
+                        <li class="list-group-item element-primaire">V1 <kbd>GEAR UP</kbd></li>
+                        <li class="list-group-item element-primaire">MAIN THRUST<kbd>50%</kbd></li>
+                        <li class="list-group-item element-primaire">VIRAGE <kbd>CAP POUR ALIGNEMENT (selon Hed LUNAR TRANFERT MFD)</kbd> PITCH 10</li>
+                        <li class="list-group-item element-primaire">ATTITUDE HOLD AUTOPILOT <kbd>ENGAGE</kbd></li>
+                        <li class="list-group-item element-primaire">MAIN THRUST<kbd>FULL</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">KILOMÉTRAGE OU MACH VALUE</li>
+                        <li class="list-group-item element-primaire">15 KM      <kbd>NUM 8</kbd> <kbd>15 DEGRÉ</kbd></li>
+                        <li class="list-group-item element-primaire">20 KM      <kbd>NUM 8</kbd> <kbd>05 DEGRÉ</kbd></li>
+                        <li class="list-group-item element-primaire">MACH 3     <kbd>SCRAM DOOR</kbd> <kbd>OPEN</kbd></li>
+                        <li class="list-group-item element-primaire">MACH 3     <kbd>SCRAM THRUST</kbd> <kbd>FULL</kbd></li>
+                        <li class="list-group-item element-primaire">EN VOL     <kbd class="petit">NUM 8</kbd> <kbd class="petit">NUM 2</kbd> MAINTENIR 100 - 200 M/S</li>
+                        <li class="list-group-item element-primaire">EN VOL     <kbd class="petit">NUM 4</kbd> <kbd class="petit">NUM 6</kbd> DIMINUER RINC</li>
+                        <li class="list-group-item element-primaire">SCRAM TEMP <kbd class="petit">SCRAM THRUST CUT</kbd> <kbd class="petit">SCRAM DOOR CLOSE</kbd></li>
+                        <li class="list-group-item element-primaire">APA 200 KM <kbd>MAIN THRUST</kbd> <kbd>CUT</kbd></li>
+                        <li class="list-group-item element-primaire list-group-item-danger">APA 200 KM <kbd>RADIATOR</kbd> <kbd>DEPLOY</kbd></li>
+                        <li class="list-group-item element-primaire">APA 200 KM <kbd>PROGRADE</kbd>
+                        <li class="list-group-item element-primaire">APA 200 KM <kbd>APU</kbd> <kbd>OFF</kbd>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    modal XR2 De-Orbit Terre -->                       
+    <div class="modal" id="modal-xr2-de-orbit-terre" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">XR2 De-Orbit Terre</h5>
                 </div>
                 <div class="modal-body">
                     <ul class="list-group">
