@@ -34,13 +34,16 @@
             <div class="col-4">
                 <h1 class="text-muted">Checklist</h1>
                 <div class="list-group defile" id="list-tab">
-                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-calc-lancement-iss-ou-autres">Calcul de lancement vers ISS ou autres</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-destination-iss">Destination [ISS]</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-calc-lancement-lune">Calcul de lancement vers LUNE</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-destination-lune">Destination [LUNE]</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-xr2-initialisation">XR2 Initialisation avant un départ</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-xr2-mise-en-veille">XR2 Mise en veille</a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-xr2-reveil">XR2 Réveil</a>
+                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-calc-lancement-iss-ou-autres">[ISS] Calcul de lancement</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-destination-iss">[ISS] Allez vers et retour</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-calc-lancement-lune">[LUNE] Calcul de lancement</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-destination-lune">[LUNE] Allez vers et retour</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-xr2-initialisation">[XR2] Initialisation avant un départ</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-xr2-mise-en-veille">[XR2] Mise en veille</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-xr2-reveil">[XR2] Réveil</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-methodes-de-circularisation">[DIVERS] Divers méthodes de circularisation</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-de-orbit">[DIVERS] De-Orbit (exemple XR2)</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-re-entry">[DIVERS] Re-Entry (exemple XR2)</a>
                 </div>
             </div>
             <div class="col-8">
@@ -64,20 +67,19 @@
                     </div>
                     <div class="tab-pane" id="list-destination-iss">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">DESTINATION ISS</li>
+                            <li class="list-group-item titre-fonce">[ISS] ALLEZ VERS ET RETOUR</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">1A- DÉCOLLAGE NAVETTE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-decollage-navette"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">1B- DÉCOLLAGE DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-decollage-dgiv"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">1C- DÉCOLLAGE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-decollage-terre"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">2- ALIGNEMENT<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-alignement"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">3A- DÉTERMINER RENCONTRE AVEC NAVETTE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-determiner-rencontre-navette"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">3B- DÉTERMINER RENCONTRE AVEC DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-determiner-rencontre-dgiv"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">3- DÉTERMINER RENCONTRE NAVETTE OU AUTRES<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-determiner-rencontre-navette"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">4- SYNCHRONISER ORBITE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-synchroniser-orbite"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">5- DOCKING AVEC DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-docking-dgiv"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-destination-lune">
                         <ul class="list-group">
-                            <li class="list-group-item titre-et-element-primaire">DESTINATION LUNE</li>
+                            <li class="list-group-item titre-fonce">[LUNE] ALLEZ VERS ET RETOUR</li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">1A- DÉCOLLAGE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-decollage-terre"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">1B- DÉCOLLAGE DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-decollage-dgiv"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">2- TLI<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-tli"><i class="fa fa-external-link"></i></button></li>
@@ -88,7 +90,8 @@
                             <li class="list-group-item element-primaire titre-sans-element-primaire">7A- MISE EN ORBITE XR2<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-mise-en-orbite-xr2"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">8- TEI<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-tei"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">9- BASE APPROACH VERS TERRE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-base-approach"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">10- PRÉPARATION ATTERRISSAGE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-lune-preparation-atterrissage-terre"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">FAIRE <kbd>[DIVERS] De-Orbit (exemple XR2)</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">FAIRE <kbd>[DIVERS] Re-Entry (exemple XR2)</kbd></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-calc-lancement-lune">
@@ -155,6 +158,64 @@
                             <li class="list-group-item element-primaire">EXTERNAL COOLING <kbd>OFF</kbd></li>
                         </ul>
                     </div>
+                    <div class="tab-pane" id="list-methodes-de-circularisation">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-fonce">DIVERS MÉTHODES DE CIRCULARISATION</li>
+                            <li class="list-group-item titre-et-element-primaire">INTERPLANETARY MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>MNU</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>MD</kbd> Mode - Time to Apoapsis ou Periapsis</li>
+                            <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Selon le ApT ou le PeT positionner la croix au centre</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque ApT ou PeT est à zero, faire <kbd>AB</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">BURN TIME MFD</li>
+                            <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>Circ</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (augmente le PeA OU ApA) (sur la croix pour navette)</li>
+                            <li class="list-group-item element-primaire"><kbd>RetroGrade</kbd> Pour se mettre en rétrograde (diminue le PeA OU ApA) (sur la croix pour navette)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Attendre la mise à feu et l'exécution</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-de-orbit">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-fonce">DE-ORBIT (EXEMPLE XR2)</li>
+                            <li class="list-group-item titre-et-element-primaire">BASESYNC MFD (gauche)</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Tgt Cape Canaveral</kbd> On devrais avoir une solution sur #3 ou #4</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Noeud pour poussée</kbd> (Quand orbite finale) Diminuer la Dist latérale </li>
+                            <li class="list-group-item titre-et-element-primaire">GLIDESLOPE  MFD (droite)</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Set Base: </kbd> <kbd class="petit">CFG; Base Cape Canaveral (PB-NB)</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Set Runway</kbd> <kbd class="petit">RWY33 (PR-NR)</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Set GS</kbd> <kbd class="petit">XR Series (PG-NG)</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit option</kbd> <kbd class="petit">DEO</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit screen</kbd> <kbd class="petit">MOD</kbd> <kbd class="petit">MOD</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">BASESYNC MFD (gauche)</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Tgt GS</kbd> On devrais avoir la solution de glideslope</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit screen</kbd> <kbd class="petit">DEO</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">GLIDESLOPE  MFD (droite)</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Auto Burn: </kbd> <kbd class="petit">AB</kbd> Autoburn: ON (wait)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-re-entry">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-fonce">RE-ENTRY (EXEMPLE XR2)</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">ProGrade</kbd> <kbd class="petit">SRFCE Earth (HUD)</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">100 Km</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Horz Lvl</kbd> <kbd class="petit">APU ON</kbd> <kbd class="petit">RADIATOR STOW</kbd> <kbd class="petit">APU OFF</kbd> <kbd class="petit">2</kbd> <kbd class="petit">Zero Both</kbd> <kbd class="petit">Set AOA +37.5</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">BaseSync MFD (gauche)</li>
+                            <hr>
+                            <li class="list-group-item titre-et-element-primaire">AeroBrake MFD (droite)</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Tgt Cape Canaveral</kbd> <kbd class="petit">PG (Path mode)</kbd> <kbd class="petit">Z+ et CNT</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">90 Km</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Autopilot Attitude Engage</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">SURVEILLANCE</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Pitch (NUM8-NUM2) + (LEFT-ALT) Mettre les lignes jaune et blanche superposées</kbd> <kbd class="petit">Elevator Trim</kbd> <kbd class="petit">NUM4-NUM6 (diminuer la Dist Latérale à 20km au sud)</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">35 Km</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">AF CTRL ON</kbd> <kbd class="petit">RCS OFF</kbd></li>
+                            <li class="list-group-item titre-et-element-primaire">30 Km</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">Autopilot Off</kbd> <kbd class="petit">Piloter au Joystick (-20°)</kbd></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>    
@@ -183,8 +244,6 @@
                         <li class="list-group-item titre-et-element-primaire">OUVERTURE DE LA SOUTE LORSQUE ACT N'EST PLUS EN SURBRILLANCE</li>
                         <li class="list-group-item element-primaire"><kbd>K</kbd> ouverture de la soute</li>
                         <li class="list-group-item element-primaire"><kbd>CTRL-U</kbd> ouverture de l'antenne KU-BAND</li>
-                        <li class="list-group-item titre-et-element-primaire">ALIGN PLANES MFD (SUITE)</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Faire un Aligner avec ISS<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-align-iss"><i class="fa fa-external-link"></i></button></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -289,7 +348,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">ISS - DÉTERMINER RENCONTRE NAVETTE</h5>
+                    <h5 class="modal-title">ISS - DÉTERMINER RENCONTRE NAVETTE OU AUTRES</h5>
                 </div>
                 <div class="modal-body">
                     <ul class="list-group">
@@ -306,38 +365,6 @@
                             <i class="bi-sunrise" style="font-size: 1rem;"></i>
                             Faire une poussée pour augmenter ApA ou PeA selon l'ISS
                         </li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--    modal ISS déterminer rencontre dgiv -->                       
-    <div class="modal" id="modal-iss-determiner-rencontre-dgiv" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">ISS - DÉTERMINER RENCONTRE DGIV</h5>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group">
-                        <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd> <kbd class="petit">FRM</kbd><kbd class="petit">EQU</kbd> <kbd class="petit">PRJ</kbd><kbd class="petit">SHP</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
-                        <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Grâce à MAP MFD, déterminer où est le soleil</li>
-                        <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
-                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
-                            <i class="bi-sunrise" style="font-size: 1rem;"></i>
-                            Faire une petite poussée pour augmenter ApA ou PeA pour déterminer le point de rencontre
-                        </li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si PEA est au soleil, noter l'ISS à mon PeT 0</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si APA est au soleil, noter l'ISS à mon ApT 0</li>
-                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde </li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Faire une poussée pour augmenter ApA ou PeA selon l'ISS</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -562,8 +589,8 @@
                         <li class="list-group-item titre-et-element-primaire">VOR/VTOL MFD</li>
                         <li class="list-group-item element-primaire titre-sans-element-primaire">SE GUIDE AVEC LES INDICATIONS DE DIRECTION</li>
                         <li class="list-group-item titre-et-element-primaire">AU SOL</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">INITIALISATION<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-initialisation"><i class="fa fa-external-link"></i></button></li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">SE METTRE EN VEILLE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-xr2-veille"><i class="fa fa-external-link"></i></button></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">FAIRE <kbd>[XR2] INITIALISATION AVANT UN DÉPART</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">FAIRE <kbd>[XR2] MISE EN VEILLE</kbd></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -736,124 +763,6 @@
                             document.getElementById("cap2").textContent = "Résultat: " + result2.toFixed(2) + "°";
                         }
                     </script>                           
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--    modal Circulariser -->                       
-    <div class="modal" id="modal-circulariser" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">CIRCULARISER</h5>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group">
-                        <li class="list-group-item titre-et-element-primaire">INTERPLANETARY MFD</li>
-                        <li class="list-group-item element-primaire"><kbd>MNU</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd>MD</kbd> Mode - Time to Apoapsis ou Periapsis</li>
-                        <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Selon le ApT ou le PeT positionner la croix au centre</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Lorsque ApT ou PeT est à zero, faire <kbd>AB</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">BURN TIME MFD</li>
-                        <li class="list-group-item element-primaire"><kbd>CIR</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd>Orbital</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd>Circ</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (augmente le PeA OU ApA) (sur la croix pour navette)</li>
-                        <li class="list-group-item element-primaire"><kbd>RetroGrade</kbd> Pour se mettre en rétrograde (diminue le PeA OU ApA) (sur la croix pour navette)</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Attendre la mise à feu et l'exécution</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--    modal XR2 Reveil -->                       
-    <div class="modal" id="modal-xr2-reveil" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">XR2 Réveil</h5>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group">
-                        <li class="list-group-item titre-et-element-primaire">OVERHEAD</li>
-                        <li class="list-group-item element-primaire">APU <kbd>ON</kbd></li>
-                        <li class="list-group-item element-primaire">CABIN HATCH <kbd>CLOSE</kbd> (Terre seulement)</li>
-                        <li class="list-group-item titre-et-element-primaire">MAIN</li>
-                        <li class="list-group-item element-primaire">AF CTRL <kbd>ON</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">PEDESTAL</li>
-                        <li class="list-group-item element-primaire">EXTERNAL COOLING <kbd>OFF</kbd></li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--    modal XR2 De-Orbit Terre -->                       
-    <div class="modal" id="modal-xr2-de-orbit-terre" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">XR2 De-Orbit Terre</h5>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group">
-                        <li class="list-group-item titre-et-element-primaire">BASESYNC MFD (gauche)</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Tgt Cape Canaveral</kbd> On devrais avoir une solution sur #3 ou #4</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Noeud pour poussée</kbd> (Quand orbite finale) Diminuer la Dist latérale </li>
-                        <li class="list-group-item titre-et-element-primaire">GLIDESLOPE  MFD (droite)</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Set Base: </kbd> <kbd class="petit">CFG; Base Cape Canaveral (PB-NB)</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Set Runway</kbd> <kbd class="petit">RWY33 (PR-NR)</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Set GS</kbd> <kbd class="petit">XR Series (PG-NG)</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit option</kbd> <kbd class="petit">DEO</kbd></li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit screen</kbd> <kbd class="petit">MOD</kbd> <kbd class="petit">MOD</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">BASESYNC MFD (gauche)</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Tgt GS</kbd> On devrais avoir la solution de glideslope</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">De-Orbit screen</kbd> <kbd class="petit">DEO</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">GLIDESLOPE  MFD (droite)</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Auto Burn: </kbd> <kbd class="petit">AB</kbd> Autoburn: ON (wait)</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--    modal XR2 Re-Entry Terre -->                       
-    <div class="modal" id="modal-xr2-re-entry-terre" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">XR2 Re-Entry Terre</h5>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group">
-                        <li class="list-group-item element-primaire"><kbd class="petit">ProGrade</kbd> <kbd class="petit">SRFCE Earth (HUD)</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">100 Km</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Horz Lvl</kbd> <kbd class="petit">APU ON</kbd> <kbd class="petit">RADIATOR STOW</kbd> <kbd class="petit">APU OFF</kbd> <kbd class="petit">2</kbd> <kbd class="petit">Zero Both</kbd> <kbd class="petit">Set AOA +37.5</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">BaseSync MFD (gauche)</li>
-                        <hr>
-                        <li class="list-group-item titre-et-element-primaire">AeroBrake MFD (droite)</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Tgt Cape Canaveral</kbd> <kbd class="petit">PG (Path mode)</kbd> <kbd class="petit">Z+ et CNT</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">90 Km</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Autopilot Attitude Engage</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">SURVEILLANCE</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Pitch (NUM8-NUM2) + (LEFT-ALT) Mettre les lignes jaune et blanche superposées</kbd> <kbd class="petit">Elevator Trim</kbd> <kbd class="petit">NUM4-NUM6 (diminuer la Dist Latérale à 20km au sud)</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">35 Km</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">AF CTRL ON</kbd> <kbd class="petit">RCS OFF</kbd></li>
-                        <li class="list-group-item titre-et-element-primaire">30 Km</li>
-                        <li class="list-group-item element-primaire"><kbd class="petit">Autopilot Off</kbd> <kbd class="petit">Piloter au Joystick (-20°)</kbd></li>
-                    </ul>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
