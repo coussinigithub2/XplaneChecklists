@@ -234,7 +234,7 @@
                         <li class="list-group-item element-primaire titre-sans-element-primaire">Attendez TN 300 pour un lancement</li>
                         <li class="list-group-item titre-et-element-primaire">TERMINAL MFD (ORBITER 2010)</li>
                         <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "run('atlantis/launch')" </strong></li>
-                        <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "orbit_alt=250e3" </strong> Altitude = 250KM</li>
+                        <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "orbit_alt=380e3" </strong> Altitude = 380KM (plus grande que l'ISS)</li>
                         <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "azimuth=139*RAD" </strong> Azimuth = 139 degré, sinon 90 degré</li>
                         <li class="list-group-item element-primaire"><kbd>INP</kbd> <strong> "do_oms2=false" </strong> Pas de OMS2</li>
                         <li class="list-group-item element-primaire list-group-item-danger"><kbd>INP</kbd> <strong> "launch()" </strong> À TN 305</li>
@@ -307,10 +307,11 @@
                         <li class="list-group-item element-primaire">EN VOL     <kbd class="petit">NUM 8</kbd> <kbd class="petit">NUM 2</kbd> MAINTENIR 100 - 200 M/S</li>
                         <li class="list-group-item element-primaire">EN VOL     <kbd class="petit">NUM 4</kbd> <kbd class="petit">NUM 6</kbd> DIMINUER RINC</li>
                         <li class="list-group-item element-primaire">SCRAM TEMP <kbd class="petit">SCRAM THRUST CUT</kbd> <kbd class="petit">SCRAM DOOR CLOSE</kbd></li>
-                        <li class="list-group-item element-primaire">APA 200 KM <kbd>MAIN THRUST</kbd> <kbd>CUT</kbd></li>
-                        <li class="list-group-item element-primaire list-group-item-danger">APA 200 KM <kbd>RADIATOR</kbd> <kbd>DEPLOY</kbd></li>
-                        <li class="list-group-item element-primaire">APA 200 KM <kbd>PROGRADE</kbd>
-                        <li class="list-group-item element-primaire">APA 200 KM <kbd>APU</kbd> <kbd>OFF</kbd>
+                        <li class="list-group-item element-primaire">APA 380 KM <kbd>MAIN THRUST</kbd> <kbd>CUT</kbd> altitude plus grande que l'ISS</li>
+                        <li class="list-group-item element-primaire list-group-item-danger">ALT 200 KM <kbd>RADIATOR</kbd> <kbd>DEPLOY</kbd></li>
+                        <li class="list-group-item element-primaire">ALT 200 KM <kbd>PROGRADE</kbd></li>
+                        <li class="list-group-item element-primaire">ALT 200 KM <kbd>APU</kbd> <kbd>OFF</kbd></li>
+                        <li class="list-group-item titre-et-element-primaire">Faire une circularisation</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -349,7 +350,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">ISS - DÉTERMINER RENCONTRE NAVETTE OU AUTRES</h5>
+                    <h5 class="modal-title">ISS - DÉTERMINER RENCONTRE (380 KM actuel pour notre vaisseau)</h5>
                 </div>
                 <div class="modal-body">
                     <ul class="list-group">
@@ -357,15 +358,12 @@
                         <li class="list-group-item element-primaire"><kbd class="petit">TGT</kbd><kbd class="petit">ISS</kbd> <kbd class="petit">FRM</kbd><kbd class="petit">EQU</kbd> <kbd class="petit">PRJ</kbd><kbd class="petit">SHP</kbd></li>
                         <li class="list-group-item element-primaire"><kbd>DST</kbd> Pour afficher les PeA et ApA</li>
                         <li class="list-group-item element-primaire"><kbd>MOD</kbd> Pour afficher que l'orbite</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Grâce au <strong>ORBIT MFD</strong> et <strong>MAP MFD</strong>, déterminer si le PEA ou APA est au soleil</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si PEA est au soleil, noter l'ISS à mon PeT 0</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Si APA est au soleil, noter l'ISS à mon ApT 0</li>
-                        <li class="list-group-item titre-et-element-primaire">ORBIT MFD</li>
-                        <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (sur la croix pour navette)</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">
-                            <i class="bi-sunrise" style="font-size: 1rem;"></i>
-                            Faire une poussée pour augmenter ApA ou PeA selon l'ISS
-                        </li>
+                        <li class="list-group-item element-primaire"><kbd>PROGRADE</kbd></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire"><strong>1) MAP MFD</strong> positionner notre vaisseau au soleil</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire"><strong>2) PETITE POUSSÉE</strong> l'apoapasis sera dans le noir</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire"><strong>3) NOTEZ ALT ISS À MON PeA</strong></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire"><strong>4) À L'ApA, EN RETROGRADE, AJUSTEZ LE PeA à l'altitude de L'ISS</strong></li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire"><strong>(*) Toutes les autres poussées se feront au Pea</strong></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -385,7 +383,7 @@
                     <ul class="list-group">
                         <li class="list-group-item titre-et-element-primaire">SYNC ORBIT MFD</li>
                         <li class="list-group-item element-primaire"><kbd>TGT</kbd> ISS</li>
-                        <li class="list-group-item element-primaire"><kbd>MOD</kbd> Sh Periapsis ou Sh Apoapsis (selon le point de rencontre)</li>
+                        <li class="list-group-item element-primaire"><kbd>MOD</kbd> Sh Periapsis (point de rencontre)</li>
                         <li class="list-group-item element-primaire"><kbd>LEN</kbd> 10</li>
                         <li class="list-group-item element-primaire"><kbd>ProGrade</kbd> Pour se mettre en prograde (sur la croix pour navette)</li>
                         <li class="list-group-item element-primaire titre-sans-element-primaire">Avancer le temps</li>
