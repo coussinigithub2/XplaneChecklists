@@ -74,7 +74,7 @@
                             <li class="list-group-item element-primaire titre-sans-element-primaire">2- ALIGNEMENT<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-alignement"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">3- DÉTERMINER RENCONTRE NAVETTE OU AUTRES<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-determiner-rencontre-navette"><i class="fa fa-external-link"></i></button></li>
                             <li class="list-group-item element-primaire titre-sans-element-primaire">4- SYNCHRONISER ORBITE<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-synchroniser-orbite"><i class="fa fa-external-link"></i></button></li>
-                            <li class="list-group-item element-primaire titre-sans-element-primaire">5- DOCKING AVEC DGIV<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-docking-dgiv"><i class="fa fa-external-link"></i></button></li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">5- DOCKING<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-iss-docking"><i class="fa fa-external-link"></i></button></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="list-destination-lune">
@@ -400,11 +400,11 @@
         </div>
     </div>
     <!--    modal ISS docking dgiv -->                       
-    <div class="modal" id="modal-iss-docking-dgiv" tabindex="-1">
+    <div class="modal" id="modal-iss-docking" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">ISS - DOCKING DGIV</h5>
+                    <h5 class="modal-title">ISS - DOCKING</h5>
                 </div>
                 <div class="modal-body">
                     <ul class="list-group">
@@ -416,12 +416,16 @@
                         <li class="list-group-item element-primaire"><kbd>NAV1</kbd> port du dock libre</li>
                         <li class="list-group-item element-primaire"><kbd>NAV2</kbd> XPDR (transpondeur ISS)</li>
                         <li class="list-group-item element-primaire titre-sans-element-primaire">Quand NAV1 a 2 barre <i class="bi-reception-2" style="font-size: 2rem;"></i></li>
-                        <li class="list-group-item titre-et-element-primaire">PILOTAGE AUTOMATIQUE</li>
+                        <li class="list-group-item titre-fonce">PILOTAGE AUTOMATIQUE DGIV</li>
                         <li class="list-group-item element-primaire"><kbd>H</kbd> Pour afficher le HUD Docking</li>
                         <li class="list-group-item element-primaire"><kbd>PRO300SPEC0</kbd> Auto docking</li>
+                        <li class="list-group-item titre-fonce">PILOTAGE MANUEL</li>
+                        <li class="list-group-item titre-sans-element-primaire">À partir de 100 KM, le vecteur croix se recentre sur la cible</li>
+                        <li class="list-group-item titre-sans-element-primaire">À partir de 50 KM de la cible, mettre le vecteur croix sur la cible</li>
                         <li class="list-group-item titre-et-element-primaire">DOCKING MFD</li>
                         <li class="list-group-item element-primaire"><kbd>HUD</kbd> Pour voir le HUD ISS Docking</li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Ouvrir le nez pour docking</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Ouvrir le nez ou le docking port pour docking</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Pour le XR5 ouvrir la vue docking avec <strong>RCS DOCKING CONFIG</strong></li>
                         <li class="list-group-item element-primaire titre-sans-element-primaire">Suivre le déroullement</li>
                     </ul>
                 </div>
