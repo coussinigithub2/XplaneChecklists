@@ -46,6 +46,8 @@
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-methodes-de-circularisation">[DIVERS] Divers méthodes de circularisation</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-de-orbit">[DIVERS] De-Orbit (exemple XR2)</a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-re-entry">[DIVERS] Re-Entry (exemple XR2)</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-burntime-mfd-freinage">[DIVERS] BURNTIME MFD - FREINAGE</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-uap-docking">[DIVERS] UAP MFD - DOCKING</a>
                 </div>
             </div>
             <div class="col-8">
@@ -216,6 +218,26 @@
                             <li class="list-group-item element-primaire"><kbd class="petit">AF CTRL ON</kbd> <kbd class="petit">RCS OFF</kbd></li>
                             <li class="list-group-item titre-et-element-primaire">30 Km</li>
                             <li class="list-group-item element-primaire"><kbd class="petit">Autopilot Off</kbd> <kbd class="petit">Piloter au Joystick (-20°)</kbd></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-burntime-mfd-freinage">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">BURNTIME MFD (FREINAGE)</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire"><kbd>DV</kbd> Inscrire le dv à éliminer lors du freinage</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire"><kbd>ENG</kbd> Choisir l'engin pour le freinage</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Positionner le vaisseau en fonction de ce freinage</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire"><kbd>BRN</kbd> Quand Rel DeltaS Distance = DST</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="list-uap-docking">
+                        <ul class="list-group">
+                            <li class="list-group-item titre-et-element-primaire">UAP MFD</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">PG</kbd> <kbd class="petit">PG</kbd> <kbd class="petit">INS</kbd></li>
+                            <li class="list-group-item element-primaire"><kbd class="petit"><</kbd> OU <kbd class="petit">></kbd> <kbd class="petit">Choisir dock</kbd> <kbd class="petit">ENT</kbd> </li>
+                            <li class="list-group-item element-primaire"><kbd class="petit">PG</kbd> <kbd class="petit">PG</kbd> Permet de voir les options</li>
+                            <li class="list-group-item element-primaire"><kbd class="petit"><</kbd> OU <kbd class="petit">></kbd> <kbd class="petit">port</kbd> <kbd class="petit">ENT</kbd> <kbd class="petit">Numéro de port</kbd> <kbd class="petit">GO</kbd> pour exécuter</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Ouvrir le nez ou le docking port pour docking</li>
+                            <li class="list-group-item element-primaire titre-sans-element-primaire">Pour le XR5 ouvrir la vue docking avec <strong>RCS NORMAL CONFIGURATION</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -418,17 +440,20 @@
                         <li class="list-group-item element-primaire"><kbd>NAV1</kbd> port du dock libre</li>
                         <li class="list-group-item element-primaire"><kbd>NAV2</kbd> XPDR (transpondeur ISS)</li>
                         <li class="list-group-item element-primaire titre-sans-element-primaire">Quand NAV1 a 2 barre <i class="bi-reception-2" style="font-size: 2rem;"></i></li>
+                        <li class="list-group-item titre-et-element-primaire">DOCKING MFD</li>
+                        <li class="list-group-item element-primaire"><kbd>HUD</kbd> Pour voir le HUD ISS Docking</li>
                         <li class="list-group-item titre-fonce">PILOTAGE AUTOMATIQUE DGIV</li>
                         <li class="list-group-item element-primaire"><kbd>H</kbd> Pour afficher le HUD Docking</li>
                         <li class="list-group-item element-primaire"><kbd>PRO300SPEC0</kbd> Auto docking</li>
                         <li class="list-group-item titre-fonce">PILOTAGE MANUEL</li>
-                        <li class="list-group-item titre-sans-element-primaire">À partir de 100 KM, le vecteur croix se recentre sur la cible</li>
-                        <li class="list-group-item titre-sans-element-primaire">À partir de 50 KM de la cible, mettre le vecteur croix sur la cible</li>
-                        <li class="list-group-item titre-et-element-primaire">DOCKING MFD</li>
-                        <li class="list-group-item element-primaire"><kbd>HUD</kbd> Pour voir le HUD ISS Docking</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">À partir de 100 KM, le vecteur croix se recentre sur la cible</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">À partir de 50 KM de la cible, mettre le vecteur croix sur la cible</li>
+                        <li class="list-group-item titre-et-element-primaire">BURNTIME MFD (FREINAGE VERS 30 KM)</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Se mettre sur le vecteur rétrograde</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Exécutez menu à gauche <kbd>BURMTIME MFD - FREINAGE</kbd></li>
                         <li class="list-group-item element-primaire titre-sans-element-primaire list-group-item-danger">Ouvrir le nez ou le docking port pour docking</li>
                         <li class="list-group-item element-primaire titre-sans-element-primaire">Pour le XR5 ouvrir la vue docking avec <strong>RCS DOCKING CONFIG</strong></li>
-                        <li class="list-group-item element-primaire titre-sans-element-primaire">Suivre le déroullement</li>
+                        <li class="list-group-item element-primaire titre-sans-element-primaire">Faire un docking manuel ou exécutez menu à gauche <kbd>UAP MFD</kbd></li>
                     </ul>
                 </div>
                 <div class="modal-footer">
