@@ -1,0 +1,51 @@
+TRANSX GAUCHE
+FWD pour changer le stage
+STAGE 1 : Escape
+STAGE 2 : Mars
+VW
+
+TRANSX DROITE
+FWD pour changer le stage
+STAGE 3 
+VAR : Graph projection
+++ : Focus
+VW
+
+
+
+
+
+
+Mars de L'ORBITE TERRESTRE
+
+[EJECTION VERS MARS (IMFD)]
+
+1-Sur le MFD gauche: 
+-Orbit-Eject; Higher Orbit; Ref Earth
+-Augmenter le TEj pour la solution suivante et s'assurer que la courbe bleu soit belle et que le point d'éjection soit sur le pointillé
+
+
+2-Sur le MFD de droite:
+-Share 0 (PG 0)
+-MAP; Tgt mars; Ref sun; dsp; plan; soi; sel pour voir Ref Mars (weak); cnt p-mars
+-Augmenter oV du MFD de gauche jusqu'a la ligne bleu s'approche de la sphere d'influence)
+-Diminuer le EIn: lorsque l'on est près du node carrée vide (normal -) OU lorsque l'on est près du node carrée plein (normal +)
+-S'assurer que le point d'éjection du mfd de gauche est correct, sinon jouer avec le TEj
+-Enlever Plan
+-AUTOBURN MFD de gauche
+-Attendre le Have a nice voyage! à gauche
+
+[MFD de gauche CORRECTION A MI-COURSE vers PeT 10M]
+-Ouvrir le module Course/Target Intercept avec TGT mars, src vaisseau, ref sun, Ecliptic:
+-Faire AB sur MFD de gauche
+
+[MFD de gauche ALIGNEMENT AVEC LA BASE vers PeT 130k (pas trop vite la simulation)]
+-BaseApproach; Ref Mars; TGT Olympus; alt 200k; orbit-insert
+-Burn
+
+[MFD de gauche ALIGNEMENT AVEC LA BASE dans le SOI de mars (pas trop vite la simulation)]
+-Burn
+
+[MFD de gauche MISE EN ORBITE DANS LE SOI DE MARS]
+Ouvrir Course/Orbit Insert ref Mars; src vaisseau:
+MFD de gauche Burn
